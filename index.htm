@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Dicey | Home</title>
+      <!--Bootstrap 5 cached version of Bootstrap’s compiled CSS and JS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+	  <!-- Bootstrap Font Icon CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+   </head>
+   <body>
+    <h1 class="heading">
+        <img class="dicey-logo" src="assets/images/dice6.png" alt="dicey logo"> Dicey
+    </h1>
+    <!-- Bootstrap Font Icons-->
+    <div class="dicey">
+        <div class = "select-level">
+            <button data-type = "level-1">
+                <i class="bi bi-dice-2"></i>
+            </button>
+            <button data-type = "level-2" >               
+                <i class="bi bi-dice-3"></i>
+            </button>
+            <button data-type = "level-3" >
+                <i class="bi bi-dice-4"></i>
+            </button>
+            <button data-type = "level-4" >
+                <i class="bi bi-dice-5"></i>
+            </button>
+			<button data-type = "level-5" >
+                <i class="bi bi-dice-6"></i>
+            </button>
+    </div>
+    <div class = "question-area">
+	<h2 id = "level">1</h2>
+	<!-- Displays Dice  -->
+	<div class="flex-container">
+		<div id = "dice-1"></div>
+		<div id = "dice-2"></div>
+		<div id = "dice-3"></div>
+		<div id = "dice-4"></div>
+		<div id = "dice-5"></div>
+		<div id = "dice-6"></div>
+	</div>
+	<div class = "numbers">
+		
+        <span id = "operand1"></span>
+        
+        <span id = "operand2"></span>
+		
+        <span id = "operand3"></span>
+		<span id = "operand4"></span>
+        <span>=</span>
+        <p class = "answer">Enter Answer</p>
+        <input id = "answer-box" type = "number">
+    </div>
+
+    <div class="score-area">
+        <p class="scores">Correct Answers <span id="score">0</span></p>
+        <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
+    </div>
+    <button data-type = "submit" class = "btn btn--gray">Submit Answer</button>
+
+    <script src="assets/js/script.js"></script>
+   </body>
+</html>
