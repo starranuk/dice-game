@@ -26,15 +26,23 @@ body {
     padding: 1%;
 }
 
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  img {
+    border-radius: 12px;
+  }
+
 .select-level {
     width: 85%;
     margin: 30px auto;
 }
-.question-area {
-    width: 50%;
-    font-size: 2rem;
-    margin: auto;
-    padding: 50px 0;
+.numbers span {
+    color: #ffffff;
 }
 
 .question-area span {
