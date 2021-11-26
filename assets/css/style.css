@@ -1,3 +1,9 @@
+{
+	margin:0;
+	padding:0;
+	border:0;
+}
+
 body {
     background-color: white;
     font-family: "Arial", sans-serif;
@@ -26,16 +32,51 @@ body {
     padding: 1%;
 }
 
+#players-score {
+  
+  text-align: left;
+}
+
+#score {
+	font-size: 3rem;
+	color: black;
+}
+
+.bi-emoji-sunglasses {
+	color: blue;
+}
+
+#computers-score {
+    padding-left: 30px;
+}
+
+#incorrect {
+	font-size: 3rem;
+	color: black;
+}
+
+.bi-emoji-frown {
+	color: red;
+}
+
+.scores div {
+	 display: inline;
+}
+
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: row ;
+	justify-content: center;
+	align-items: center;
   }
   
-  img {
+
+img {
     border-radius: 12px;
   }
+  
+  
 
 .select-level {
     width: 85%;
@@ -45,12 +86,76 @@ body {
     color: #ffffff;
 }
 
-.question-area span {
+.display-dice span {
     padding: 0 15px;
 }
 /* --------- Buttons */
+.bi {
+	border: none;
+    font-size: 3.2rem;
+    transition: all 0.5s;
+}
 
-.btn {
-    width: 220px;
-    height: 60px;  
+
+
+.bi-dice-2-fill {
+	 color: blue;
+}
+
+.bi-dice-3-fill {
+	 color: green;
+}
+
+.bi-dice-4-fill {
+	 color: yellow;
+}
+
+.bi-dice-5-fill {
+	 color: red;
+}
+
+.bi-dice-6-fill {
+	 color: purple;
+}
+
+/* --------- Media queries */
+
+@media (max-width: 414px) {
+.dicey-logo {
+	display: none;
+}
+
+.heading {
+	font-size: 2rem;
+}
+
+.bi {
+    font-size: 2rem;
+}
+
+img {
+	width: 50px;
+	height: auto;
+	border-radius: 8px;
+}
+
+@media (max-width: 360px) {
+	
+.dicey-logo {
+	display: none;
+}
+
+.heading {
+	font-size: 1.5rem;
+}
+
+.bi {
+    font-size: 1.5rem;
+}
+
+}
+ 	img {
+	width: 30px;
+	height: auto;
+	border-radius: 5px;
 }
