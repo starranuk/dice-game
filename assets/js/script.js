@@ -1,12 +1,15 @@
-// Wait for the DOM to finish loading before running the game
-// Get the button elements and add event listeners to them
+/**This project was inspired by the Code Institute Love Maths walk through by AJGreaves.  
+ * The page loads and event listeners wait for button actions triggered by the user.
+ * */
 
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit") {
+            if (this.getAttribute("data-type") === "reset") {
+		    location.reload();
+	    } else if (this.getAttribute("data-type") === "submit") {
                 checkAnswer();
             } else {
                 let gameType = this.getAttribute("data-type");
@@ -27,9 +30,9 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 /**
- * The main game "loop", called when the script is first loaded
+ * The level 1 game with only two dice called when the script is first loaded
  * and after the user's answer has been processed
- */
+ **/
 function runGame(gameType) {
 
     document.getElementById("answer-box").value = "";
@@ -43,7 +46,11 @@ function runGame(gameType) {
 	let num5 = Math.floor(Math.random() * 6) + 1;
     let num6 = Math.floor(Math.random() * 6) + 1;
 	
-	 
+	 /** 
+      * Adds extra dice as each level is called and also inserts a blank image to replace previous higher level games in order to remove the issue of cached images
+      * 
+      * */
+      
     if (gameType === "level-1") {
 		let gameLevel = gameType;
 		document.getElementById("level").innerHTML = gameLevel;
@@ -53,6 +60,13 @@ function runGame(gameType) {
 		document.getElementById("dice-2").innerHTML = image2;
         let image3 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-3").innerHTML = image3;
+		let image4 = `<img src="assets/images/blank.png">`;
+		document.getElementById("dice-4").innerHTML = image4;
+		let image5 = `<img src="assets/images/blank.png">`;
+		document.getElementById("dice-5").innerHTML = image5;
+        let image6 = `<img src="assets/images/blank.png">`;
+		document.getElementById("dice-6").innerHTML = image6;
+       
         addTwoDice(num1, num2); 
     } else if (gameType === "level-2") {
 		let gameLevel = gameType;
@@ -63,12 +77,13 @@ function runGame(gameType) {
 		document.getElementById("dice-2").innerHTML = image2;
 		let image3 = `<img src="assets/images/dice${num3}.png">`;
 		document.getElementById("dice-3").innerHTML = image3;
-        let image4 = `<img src="assets/images/blank.png">`;
+		let image4 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-4").innerHTML = image4;
-        let image5 = `<img src="assets/images/blank.png">`;
+		let image5 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-5").innerHTML = image5;
         let image6 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-6").innerHTML = image6;
+       
         addThreeDice(num1, num2, num3);	
     }   else if (gameType === "level-3") {
 		let gameLevel = gameType;
@@ -102,6 +117,22 @@ function runGame(gameType) {
         let image6 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-6").innerHTML = image6;
         addFiveDice(num1, num2, num3, num4, num5);
+		}   else if (gameType === "level-5") {
+		let gameLevel = gameType;
+		document.getElementById("level").innerHTML = gameLevel; 
+		let image1 = `<img src="assets/images/dice${num1}.png">`;
+		document.getElementById("dice-1").innerHTML = image1;
+		let image2 = `<img src="assets/images/dice${num2}.png">`;
+		document.getElementById("dice-2").innerHTML = image2;
+		let image3 = `<img src="assets/images/dice${num3}.png">`;
+		document.getElementById("dice-3").innerHTML = image3;
+		let image4 = `<img src="assets/images/dice${num4}.png">`;
+		document.getElementById("dice-4").innerHTML = image4;
+        let image5 = `<img src="assets/images/dice${num5}.png">`;
+		document.getElementById("dice-5").innerHTML = image5;
+        let image6 = `<img src="assets/images/dice${num6}.png">`;
+		document.getElementById("dice-6").innerHTML = image6;
+        addSixDice(num1, num2, num3, num4, num5, num6);
     } else if (gameType === "division") {
         num1 = num1 * num2;
         displayDivisionQuestion(num1, num2);
@@ -113,36 +144,38 @@ function runGame(gameType) {
 }
 
 /**
- * Checks the answer against the first element in
- * the returned calculateCorrectAnswer array
+ * Checks the answer against the calculateCorrectAnswer array
  */
 function checkAnswer() {
 
     let userAnswer = parseInt(document.getElementById("answer-box").value);
-    let calculatedAnswer = calculateCorrectAnswer();
-    let isCorrect = userAnswer === calculatedAnswer[0];
+    let correctAnswer = addDice();
+    let isCorrect = userAnswer === correctAnswer[0];
 
     if (isCorrect) {
-        alert("Hey! You got it right! :D");
+        alert(`Well done ${userAnswer} is the correct answer`);
         incrementScore();
     } else {
-        alert(`Awwww.... you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
+        alert(`Sorry ${userAnswer} is incorrect. The dice add up to ${correctAnswer[0]} Have another go, you can do it`);
         incrementWrongAnswer();
     }
 
-    runGame(calculatedAnswer[1]);
+    runGame(correctAnswer[1]);
 
 }
 
 /**
  * Gets the operands (the numbers) 
- * directly from the dom, and returns the correct answer.
+ * directly from the dom, and returns the correct answer. These are only used for calculations and are not displayed. 
+ *They still need to be in the dom color is set to background
  */
-function calculateCorrectAnswer(gameType) {
+function addDice(gameType) {
 let operand1 = parseInt(document.getElementById('operand1').innerText);
 let operand2 = parseInt(document.getElementById('operand2').innerText);
 let operand3 = parseInt(document.getElementById('operand3').innerText);
 let operand4 = parseInt(document.getElementById('operand4').innerText);
+let operand5 = parseInt(document.getElementById('operand5').innerText);
+let operand6 = parseInt(document.getElementById('operand6').innerText);
 let calcLevel = document.getElementById('level').innerText;
     
     if (calcLevel === 'level-1') {
@@ -151,6 +184,10 @@ let calcLevel = document.getElementById('level').innerText;
         return [(operand1 + operand2) + operand3, "level-2"];
 	} else if(calcLevel === 'level-3') {
         return [(operand1 + operand2 + operand3 + operand4), "level-3"];
+	} else if(calcLevel === 'level-4') {
+        return [(operand1 + operand2 + operand3 + operand4 + operand5), "level-4"];
+	} else if(calcLevel === 'level-5') {
+        return [(operand1 + operand2 + operand3 + operand4 + operand5 + operand6), "level-5"];
        } else {
         alert(`Unimplemented operator ${operator}`);
         throw `Unimplemented operator ${operator}. Aborting!`;

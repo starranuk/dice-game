@@ -20,11 +20,13 @@
         <div id="players-score"><p class="scores"><i class="bi bi-emoji-sunglasses"></i>    <span id="score">0</span></p></div>
         <div id="computers-score"><p class="scores"><i class="bi bi-emoji-frown"></i>    <span id="incorrect">0</span></p></div>
     </div>
+	 <!-- game reset button with warning-->
+	<button data-type = "reset" type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Careful if you Reset the Game you will lose your score</button>">Reset the Game</button>
     <!-- Bootstrap Font Icons-->
 	
 	<div class="dicey">
 		<div class = "select-level" class = "btn btn--sm btn--green">
-			<button data-type = "level-1" onclick="location.reload();" >
+			<button data-type = "level-1" >
 				<i class="bi bi-dice-2-fill"></i>
 			</button>
 			<button data-type = "level-2" >               
@@ -42,7 +44,7 @@
 		</div>
 	
     <div class = "display-dice">
-	<h2 id = "level">1</h2>
+	<h2 id = "level"></h2>
 	<!-- Displays Dice  -->
 	
 		<div class = "display-dice">
@@ -66,12 +68,12 @@
 		<span id = "operand5"></span>
 		<span id = "operand6"></span>
         <span>=</span>
-        <p class = "answer">Enter Answer</p>
+        <p class = "answer">Have you worked it out yet?</p>
         <input id = "answer-box" type = "number">
     </div>
+	<br>
 
-    
-    <button data-type = "submit" class = "btn btn--gray">Submit Answer</button>
+	<button type="button" data-type = "submit" class="btn btn-primary btn-lg btn-block">Submit your answer!</button>
 
     <script src="assets/js/script.js"></script>
    </body>
