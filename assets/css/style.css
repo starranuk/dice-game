@@ -63,6 +63,7 @@ body {
 	 display: inline;
 }
 
+
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -99,23 +100,23 @@ img {
 
 
 .bi-dice-2-fill {
-	 color: blue;
+    color: green;
 }
 
 .bi-dice-3-fill {
-	 color: green;
+    color: pink;
 }
 
 .bi-dice-4-fill {
-	 color: yellow;
+    color: blue;
 }
 
 .bi-dice-5-fill {
-	 color: red;
+    color: red;
 }
 
 .bi-dice-6-fill {
-	 color: purple;
+    color: yellow;
 }
 
 /* --------- Media queries */
@@ -129,12 +130,20 @@ img {
 	font-size: 2rem;
 }
 
+#score {
+    font-size: 1.5rem;
+}
+
+#incorrect {
+    font-size: 1.5rem;
+}
+
 .bi {
     font-size: 2rem;
 }
 
 img {
-	width: 50px;
+	width: 60px;
 	height: auto;
 	border-radius: 8px;
 }
@@ -149,13 +158,21 @@ img {
 	font-size: 1.5rem;
 }
 
+#score {
+    font-size: 1.5rem;
+}
+
+#incorrect {
+    font-size: 1.5rem;
+}
+
 .bi {
     font-size: 1.5rem;
 }
 
 }
  	img {
-	width: 30px;
+	width: 45px;
 	height: auto;
 	border-radius: 5px;
 }

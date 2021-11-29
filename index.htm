@@ -16,12 +16,14 @@
     <h1 class="heading">
         <img class="dicey-logo" src="assets/images/dice6.png" alt="dicey logo"> Dicey
     </h1>
+	<h2 class = "player-scores">Player Scores</h2>
 	<div class = "flex-container">
         <div id="players-score"><p class="scores"><i class="bi bi-emoji-sunglasses"></i>    <span id="score">0</span></p></div>
-        <div id="computers-score"><p class="scores"><i class="bi bi-emoji-frown"></i>    <span id="incorrect">0</span></p></div>
+        <div id="computers-score"><p class="scores"><i class="bi bi-emoji-frown"></i>    <span id="incorrect">0</span></p></div>	
     </div>
-	 <!-- game reset button with warning-->
-	<button data-type = "reset" type="button" class="btn btn-outline-warning" data-toggle="tooltip" data-placement="top" title="Careful if you Reset the Game you will lose your score</button>">Reset the Game</button>
+	 <!-- game reset button with warning if using a PC/Keyboard and Mouse-->
+	 	<button data-type = "reset" type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Careful if you Reset the Game you will lose your score</button>">Reset the Game</button>
+	
     <!-- Bootstrap Font Icons-->
 	
 	<div class="dicey">
@@ -74,6 +76,7 @@
 	<br>
 
 	<button type="button" data-type = "submit" class="btn btn-primary btn-lg btn-block">Submit your answer!</button>
+	<br>
 
     <script src="assets/js/script.js"></script>
    </body>
