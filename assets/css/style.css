@@ -131,6 +131,15 @@ img {
 
 }
 
+@media screen and (max-width: 770px) {
+    img {
+        width: 70px;
+        height: auto;
+        border-radius: 8px;
+    }
+    
+}
+
 @media screen and (max-width: 414px) {
 .dicey-logo {
 	display: none;
@@ -155,7 +164,7 @@ img {
 img {
 	width: 50px;
 	height: auto;
-	border-radius: 8px;
+	border-radius: 6px;
 }
 
 @media (max-width: 360px) {
@@ -184,5 +193,5 @@ img {
  	img {
 	width: 45px;
 	height: auto;
-	border-radius: 5px;
+	border-radius: 4px;
 }
