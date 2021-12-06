@@ -2,27 +2,44 @@
  * The page loads and event listeners wait for button actions triggered by the user.
  * */
 
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
+ document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.getElementsByTagName("button");
 
-    for (let button of buttons) {
+    for (const button of buttons) {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "reset") {
-		    location.reload();
+		    Swal.fire({
+				  title: 'Are you sure?',
+				  text: "You won't be able to revert this!",
+				  icon: 'warning',
+				  showCancelButton: true,
+				  confirmButtonColor: '#3085d6',
+				  cancelButtonColor: '#d33',
+				  confirmButtonText: 'Yes, delete it!'
+				}).then((result) => {
+				  if (result.isConfirmed) {
+					Swal.fire(
+					  'Deconsted!',
+					  'Your file has been delete.',
+					  'success'
+					)
+					location.reload();
+				  }
+				})
 	    } else if (this.getAttribute("data-type") === "submit") {
                 checkAnswer();
             } else {
-                let gameType = this.getAttribute("data-type");
+                const gameType = this.getAttribute("data-type");
                 runGame(gameType);
             }
         });
 
-        }
+		}
         document.getElementById("answer-box").addEventListener("keydown", function(event) {
             if (event.key === "Enter") {
                 checkAnswer();
             }
-        });
+        }); 
         
     runGame("level-1");
     
@@ -39,12 +56,12 @@ function runGame(gameType) {
     document.getElementById("answer-box").focus();
 
     // Creates random numbers between 1 and 6
-    let num1 = Math.floor(Math.random() * 6) + 1;
-    let num2 = Math.floor(Math.random() * 6) + 1;
-	let num3 = Math.floor(Math.random() * 6) + 1;
-    let num4 = Math.floor(Math.random() * 6) + 1;
-	let num5 = Math.floor(Math.random() * 6) + 1;
-    let num6 = Math.floor(Math.random() * 6) + 1;
+    const num1 = Math.floor(Math.random() * 6) + 1;
+    const num2 = Math.floor(Math.random() * 6) + 1;
+	const num3 = Math.floor(Math.random() * 6) + 1;
+    const num4 = Math.floor(Math.random() * 6) + 1;
+	const num5 = Math.floor(Math.random() * 6) + 1;
+    const num6 = Math.floor(Math.random() * 6) + 1;
 	
 	 /** 
       * Adds extra dice as each level is called and also inserts a blank image to replace previous higher level games in order to remove the issue of cached images
@@ -52,85 +69,85 @@ function runGame(gameType) {
       * */
       
     if (gameType === "level-1") {
-		let gameLevel = gameType;
+		const gameLevel = gameType;
 		document.getElementById("level").innerHTML = gameLevel;
-		let image1 = `<img src="assets/images/dice${num1}.png" alt="${num1}">`;
+		const image1 = `<img src="assets/images/dice${num1}.png" alt="${num1}">`;
 		document.getElementById("dice-1").innerHTML = image1;
-		let image2 = `<img src="assets/images/dice${num2}.png" alt="${num2}">`;
+		const image2 = `<img src="assets/images/dice${num2}.png" alt="${num2}">`;
 		document.getElementById("dice-2").innerHTML = image2;
-        let image3 = `<img src="assets/images/blank.png">`;
+        const image3 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-3").innerHTML = image3;
-		let image4 = `<img src="assets/images/blank.png">`;
+		const image4 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-4").innerHTML = image4;
-		let image5 = `<img src="assets/images/blank.png">`;
+		const image5 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-5").innerHTML = image5;
-        let image6 = `<img src="assets/images/blank.png">`;
+        const image6 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-6").innerHTML = image6;
        
         addTwoDice(num1, num2); 
     } else if (gameType === "level-2") {
-		let gameLevel = gameType;
+		const gameLevel = gameType;
 		document.getElementById("level").innerHTML = gameLevel; 
-		let image1 = `<img src="assets/images/dice${num1}.png">`;
+		const image1 = `<img src="assets/images/dice${num1}.png">`;
 		document.getElementById("dice-1").innerHTML = image1;
-		let image2 = `<img src="assets/images/dice${num2}.png">`;
+		const image2 = `<img src="assets/images/dice${num2}.png">`;
 		document.getElementById("dice-2").innerHTML = image2;
-		let image3 = `<img src="assets/images/dice${num3}.png">`;
+		const image3 = `<img src="assets/images/dice${num3}.png">`;
 		document.getElementById("dice-3").innerHTML = image3;
-		let image4 = `<img src="assets/images/blank.png">`;
+		const image4 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-4").innerHTML = image4;
-		let image5 = `<img src="assets/images/blank.png">`;
+		const image5 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-5").innerHTML = image5;
-        let image6 = `<img src="assets/images/blank.png">`;
+        const image6 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-6").innerHTML = image6;
        
         addThreeDice(num1, num2, num3);	
     }   else if (gameType === "level-3") {
-		let gameLevel = gameType;
+		const gameLevel = gameType;
 		document.getElementById("level").innerHTML = gameLevel; 
-		let image1 = `<img src="assets/images/dice${num1}.png">`;
+		const image1 = `<img src="assets/images/dice${num1}.png">`;
 		document.getElementById("dice-1").innerHTML = image1;
-		let image2 = `<img src="assets/images/dice${num2}.png">`;
+		const image2 = `<img src="assets/images/dice${num2}.png">`;
 		document.getElementById("dice-2").innerHTML = image2;
-		let image3 = `<img src="assets/images/dice${num3}.png">`;
+		const image3 = `<img src="assets/images/dice${num3}.png">`;
 		document.getElementById("dice-3").innerHTML = image3;
-		let image4 = `<img src="assets/images/dice${num4}.png">`;
+		const image4 = `<img src="assets/images/dice${num4}.png">`;
 		document.getElementById("dice-4").innerHTML = image4;
-        let image5 = `<img src="assets/images/blank.png">`;
+        const image5 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-5").innerHTML = image5;
-        let image6 = `<img src="assets/images/blank.png">`;
+        const image6 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-6").innerHTML = image6;
         addFourDice(num1, num2, num3, num4);
     }   else if (gameType === "level-4") {
-		let gameLevel = gameType;
+		const gameLevel = gameType;
 		document.getElementById("level").innerHTML = gameLevel; 
-		let image1 = `<img src="assets/images/dice${num1}.png">`;
+		const image1 = `<img src="assets/images/dice${num1}.png">`;
 		document.getElementById("dice-1").innerHTML = image1;
-		let image2 = `<img src="assets/images/dice${num2}.png">`;
+		const image2 = `<img src="assets/images/dice${num2}.png">`;
 		document.getElementById("dice-2").innerHTML = image2;
-		let image3 = `<img src="assets/images/dice${num3}.png">`;
+		const image3 = `<img src="assets/images/dice${num3}.png">`;
 		document.getElementById("dice-3").innerHTML = image3;
-		let image4 = `<img src="assets/images/dice${num4}.png">`;
+		const image4 = `<img src="assets/images/dice${num4}.png">`;
 		document.getElementById("dice-4").innerHTML = image4;
-        let image5 = `<img src="assets/images/dice${num5}.png">`;
+        const image5 = `<img src="assets/images/dice${num5}.png">`;
 		document.getElementById("dice-5").innerHTML = image5;
-        let image6 = `<img src="assets/images/blank.png">`;
+        const image6 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-6").innerHTML = image6;
         addFiveDice(num1, num2, num3, num4, num5);
 		}   else if (gameType === "level-5") {
-		let gameLevel = gameType;
+		const gameLevel = gameType;
 		document.getElementById("level").innerHTML = gameLevel; 
-		let image1 = `<img src="assets/images/dice${num1}.png">`;
+		const image1 = `<img src="assets/images/dice${num1}.png">`;
 		document.getElementById("dice-1").innerHTML = image1;
-		let image2 = `<img src="assets/images/dice${num2}.png">`;
+		const image2 = `<img src="assets/images/dice${num2}.png">`;
 		document.getElementById("dice-2").innerHTML = image2;
-		let image3 = `<img src="assets/images/dice${num3}.png">`;
+		const image3 = `<img src="assets/images/dice${num3}.png">`;
 		document.getElementById("dice-3").innerHTML = image3;
-		let image4 = `<img src="assets/images/dice${num4}.png">`;
+		const image4 = `<img src="assets/images/dice${num4}.png">`;
 		document.getElementById("dice-4").innerHTML = image4;
-        let image5 = `<img src="assets/images/dice${num5}.png">`;
+        const image5 = `<img src="assets/images/dice${num5}.png">`;
 		document.getElementById("dice-5").innerHTML = image5;
-        let image6 = `<img src="assets/images/dice${num6}.png">`;
+        const image6 = `<img src="assets/images/dice${num6}.png">`;
 		document.getElementById("dice-6").innerHTML = image6;
         addSixDice(num1, num2, num3, num4, num5, num6);
     } else if (gameType === "division") {
@@ -153,10 +170,10 @@ function checkAnswer() {
     let isCorrect = userAnswer === correctAnswer[0];
 
     if (isCorrect) {
-        alert(`Well done ${userAnswer} is the correct answer`);
+        Swal.fire(`Well done ${userAnswer} is the correct answer`);
         incrementScore();
     } else {
-        alert(`Sorry ${userAnswer} is incorrect. The dice add up to ${correctAnswer[0]} Have another go, you can do it`);
+        Swal.fire(`Sorry ${userAnswer} is incorrect. The dice add up to ${correctAnswer[0]} Have another go, you can do it`);
         incrementWrongAnswer();
     }
 
