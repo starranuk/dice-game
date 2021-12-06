@@ -83,8 +83,10 @@ function runGame(gameType) {
 		document.getElementById("dice-5").innerHTML = image5;
         const image6 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-6").innerHTML = image6;
+		document.getElementById('operand1').textContent = num1;
+		document.getElementById('operand2').textContent = num2;
        
-        addTwoDice(num1, num2); 
+        
     } else if (gameType === "level-2") {
 		const gameLevel = gameType;
 		document.getElementById("level").innerHTML = gameLevel; 
@@ -100,8 +102,11 @@ function runGame(gameType) {
 		document.getElementById("dice-5").innerHTML = image5;
         const image6 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-6").innerHTML = image6;
+		document.getElementById('operand1').textContent = num1;
+		document.getElementById('operand2').textContent = num2;
+		document.getElementById('operand3').textContent = num3;
        
-        addThreeDice(num1, num2, num3);	
+       
     }   else if (gameType === "level-3") {
 		const gameLevel = gameType;
 		document.getElementById("level").innerHTML = gameLevel; 
@@ -117,7 +122,11 @@ function runGame(gameType) {
 		document.getElementById("dice-5").innerHTML = image5;
         const image6 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-6").innerHTML = image6;
-        addFourDice(num1, num2, num3, num4);
+        document.getElementById('operand1').textContent = num1;
+		document.getElementById('operand2').textContent = num2;
+		document.getElementById('operand3').textContent = num3;
+		document.getElementById('operand4').textContent = num4;
+		
     }   else if (gameType === "level-4") {
 		const gameLevel = gameType;
 		document.getElementById("level").innerHTML = gameLevel; 
@@ -133,7 +142,12 @@ function runGame(gameType) {
 		document.getElementById("dice-5").innerHTML = image5;
         const image6 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-6").innerHTML = image6;
-        addFiveDice(num1, num2, num3, num4, num5);
+        document.getElementById('operand1').textContent = num1;
+		document.getElementById('operand2').textContent = num2;
+		document.getElementById('operand3').textContent = num3;
+		document.getElementById('operand4').textContent = num4;
+		document.getElementById('operand5').textContent = num5;
+		
 		}   else if (gameType === "level-5") {
 		const gameLevel = gameType;
 		document.getElementById("level").innerHTML = gameLevel; 
@@ -149,10 +163,13 @@ function runGame(gameType) {
 		document.getElementById("dice-5").innerHTML = image5;
         const image6 = `<img src="assets/images/dice${num6}.png">`;
 		document.getElementById("dice-6").innerHTML = image6;
-        addSixDice(num1, num2, num3, num4, num5, num6);
-    } else if (gameType === "division") {
-        num1 = num1 * num2;
-        displayDivisionQuestion(num1, num2);
+        document.getElementById('operand1').textContent = num1;
+		document.getElementById('operand2').textContent = num2;
+		document.getElementById('operand3').textContent = num3;
+		document.getElementById('operand4').textContent = num4;
+		document.getElementById('operand5').textContent = num5;
+		document.getElementById('operand6').textContent = num6;
+    
     } else {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
@@ -217,8 +234,8 @@ let calcLevel = document.getElementById('level').innerText;
  */
 function incrementScore() {
 
-    let oldScore = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText = ++oldScore;
+    let rollingScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++rollingScore;
 
 }
 
@@ -227,55 +244,7 @@ function incrementScore() {
  */
 function incrementWrongAnswer() {
 
-    let oldScore = parseInt(document.getElementById("incorrect").innerText);
-    document.getElementById("incorrect").innerText = ++oldScore;
+    let rollingScore = parseInt(document.getElementById("incorrect").innerText);
+    document.getElementById("incorrect").innerText = ++rollingScore;
     
-}
-
-function addTwoDice(operand1, operand2) {
-
-    document.getElementById('operand1').textContent = operand1;
-    document.getElementById('operand2').textContent = operand2;
-    document.getElementById('operator').textContent = "+";
-    
-}
-
-function addThreeDice(operand1, operand2, operand3) {
-
-    document.getElementById('operand1').textContent = operand1;
-    document.getElementById('operand2').textContent = operand2;
-	document.getElementById('operand3').textContent = operand3;
-    document.getElementById('operator').textContent = "+";
-}
-
-function addFourDice(operand1, operand2, operand3, operand4) {
-
-    document.getElementById('operand1').textContent = operand1;
-    document.getElementById('operand2').textContent = operand2;
-	document.getElementById('operand3').textContent = operand3;
-	document.getElementById('operand4').textContent = operand4;
-    document.getElementById('operator').textContent = "+";
-
-}
-function addFiveDice(operand1, operand2, operand3, operand4, operand5) {
-
-    document.getElementById('operand1').textContent = operand1;
-    document.getElementById('operand2').textContent = operand2;
-	document.getElementById('operand3').textContent = operand3;
-	document.getElementById('operand4').textContent = operand4;
-    document.getElementById('operand5').textContent = operand5;
-    document.getElementById('operator').textContent = "+";
-
-}
-
-function addSixDice(operand1, operand2, operand3, operand4, operand5, operand6) {
-
-    document.getElementById('operand1').textContent = operand1;
-    document.getElementById('operand2').textContent = operand2;
-	document.getElementById('operand3').textContent = operand3;
-	document.getElementById('operand4').textContent = operand4;
-    document.getElementById('operand5').textContent = operand5;
-    document.getElementById('operand6').textContent = operand6;
-    document.getElementById('operator').textContent = "+";
-
 }
