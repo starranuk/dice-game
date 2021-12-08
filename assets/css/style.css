@@ -77,15 +77,11 @@ img {
     border-radius: 12px;
   }
   
-  
-
 .select-level {
     width: 85%;
     margin: 30px auto;
 }
-.numbers span {
-    color: #ffffff;
-}
+
 
 .display-dice span {
     padding: 0 15px;

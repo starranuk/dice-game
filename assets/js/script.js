@@ -10,7 +10,7 @@
             if (this.getAttribute("data-type") === "reset") {
 		    Swal.fire({
 				  title: 'Are you sure?',
-				  text: "You won't be able to revert this!",
+				  text: "This will delete the current scores",
 				  icon: 'warning',
 				  showCancelButton: true,
 				  confirmButtonColor: '#3085d6',
@@ -62,6 +62,13 @@ function runGame(gameType) {
     const num4 = Math.floor(Math.random() * 6) + 1;
 	const num5 = Math.floor(Math.random() * 6) + 1;
     const num6 = Math.floor(Math.random() * 6) + 1;
+	// Converts from integer to string to be used in HTML data attribute
+	let strnum1 = num1.toString();
+	let strnum2 = num2.toString();
+	let strnum3 = num3.toString();
+	let strnum4 = num4.toString();
+	let strnum5 = num5.toString();
+	let strnum6 = num6.toString();
 	
 	 /** 
       * Adds extra dice as each level is called and also inserts a blank image to replace previous higher level games in order to remove the issue of cached images
@@ -83,8 +90,8 @@ function runGame(gameType) {
 		document.getElementById("dice-5").innerHTML = image5;
         const image6 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-6").innerHTML = image6;
-		document.getElementById('operand1').textContent = num1;
-		document.getElementById('operand2').textContent = num2;
+		dice1.dataset.opval = `${strnum1}`;
+		dice2.dataset.opval = `${strnum2}`;  
        
         
     } else if (gameType === "level-2") {
@@ -102,9 +109,9 @@ function runGame(gameType) {
 		document.getElementById("dice-5").innerHTML = image5;
         const image6 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-6").innerHTML = image6;
-		document.getElementById('operand1').textContent = num1;
-		document.getElementById('operand2').textContent = num2;
-		document.getElementById('operand3').textContent = num3;
+		dice1.dataset.opval = `${strnum1}`;
+		dice2.dataset.opval = `${strnum2}`;
+		dice3.dataset.opval = `${strnum3}`;
        
        
     }   else if (gameType === "level-3") {
@@ -122,10 +129,10 @@ function runGame(gameType) {
 		document.getElementById("dice-5").innerHTML = image5;
         const image6 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-6").innerHTML = image6;
-        document.getElementById('operand1').textContent = num1;
-		document.getElementById('operand2').textContent = num2;
-		document.getElementById('operand3').textContent = num3;
-		document.getElementById('operand4').textContent = num4;
+        dice1.dataset.opval = `${strnum1}`;
+		dice2.dataset.opval = `${strnum2}`;
+		dice3.dataset.opval = `${strnum3}`;
+		dice4.dataset.opval = `${strnum4}`;
 		
     }   else if (gameType === "level-4") {
 		const gameLevel = gameType;
@@ -142,11 +149,11 @@ function runGame(gameType) {
 		document.getElementById("dice-5").innerHTML = image5;
         const image6 = `<img src="assets/images/blank.png">`;
 		document.getElementById("dice-6").innerHTML = image6;
-        document.getElementById('operand1').textContent = num1;
-		document.getElementById('operand2').textContent = num2;
-		document.getElementById('operand3').textContent = num3;
-		document.getElementById('operand4').textContent = num4;
-		document.getElementById('operand5').textContent = num5;
+        dice1.dataset.opval = `${strnum1}`;
+		dice2.dataset.opval = `${strnum2}`;
+		dice3.dataset.opval = `${strnum3}`;
+		dice4.dataset.opval = `${strnum4}`;
+		dice5.dataset.opval = `${strnum5}`;
 		
 		}   else if (gameType === "level-5") {
 		const gameLevel = gameType;
@@ -163,12 +170,12 @@ function runGame(gameType) {
 		document.getElementById("dice-5").innerHTML = image5;
         const image6 = `<img src="assets/images/dice${num6}.png">`;
 		document.getElementById("dice-6").innerHTML = image6;
-        document.getElementById('operand1').textContent = num1;
-		document.getElementById('operand2').textContent = num2;
-		document.getElementById('operand3').textContent = num3;
-		document.getElementById('operand4').textContent = num4;
-		document.getElementById('operand5').textContent = num5;
-		document.getElementById('operand6').textContent = num6;
+        dice1.dataset.opval = `${strnum1}`;
+		dice2.dataset.opval = `${strnum2}`;
+		dice3.dataset.opval = `${strnum3}`;
+		dice4.dataset.opval = `${strnum4}`;
+		dice5.dataset.opval = `${strnum5}`;
+		dice6.dataset.opval = `${strnum6}`;
     
     } else {
         alert(`Unknown game type: ${gameType}`);
@@ -178,7 +185,7 @@ function runGame(gameType) {
 }
 
 /**
- * Checks the answer against the calculateCorrectAnswer array
+ * Checks the answer against the addDice() function
  */
 function checkAnswer() {
 
@@ -204,14 +211,21 @@ function checkAnswer() {
  *They still need to be in the dom color is set to background
  */
 function addDice(gameType) {
-let operand1 = parseInt(document.getElementById('operand1').innerText);
-let operand2 = parseInt(document.getElementById('operand2').innerText);
-let operand3 = parseInt(document.getElementById('operand3').innerText);
-let operand4 = parseInt(document.getElementById('operand4').innerText);
-let operand5 = parseInt(document.getElementById('operand5').innerText);
-let operand6 = parseInt(document.getElementById('operand6').innerText);
+	// Converts string from HTML data attribute to integer 
+let number1 = dice1.dataset.opval;
+let number2 = dice2.dataset.opval;
+let number3 = dice3.dataset.opval;
+let number4 = dice4.dataset.opval;
+let number5 = dice5.dataset.opval;
+let number6 = dice6.dataset.opval;
+let operand1 = parseInt(number1);
+let operand2 = parseInt(number2);
+let operand3 = parseInt(number3);
+let operand4 = parseInt(number4);
+let operand5 = parseInt(number5);
+let operand6 = parseInt(number6);
 let calcLevel = document.getElementById('level').innerText;
-    
+ console.log(operand1); 
     if (calcLevel === 'level-1') {
         return [operand1 + operand2, "level-1"];
     } else if(calcLevel === 'level-2') {
@@ -226,7 +240,7 @@ let calcLevel = document.getElementById('level').innerText;
         alert(`Unimplemented operator ${operator}`);
         throw `Unimplemented operator ${operator}. Aborting!`;
     }
-
+ 
 }
 
 /**
