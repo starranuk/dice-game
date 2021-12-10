@@ -75,8 +75,6 @@ body {
 
 img {
     border-radius: 12px;
-    height: 160px;
-    width: 160px;
   }
   
 .select-level {
@@ -95,8 +93,8 @@ img {
     transition: all 0.5s;
 }
 
-.bi-dice-2-fill {
-    color: white;
+.bi-dice-1-fill {
+    color: black;
 }
 
 .bi-dice-2-fill {
@@ -121,13 +119,15 @@ img {
 
 /* --------- Media queries */
 
-/*iMac Pro*/
-@media screen and (max-width: 5000px) {
 
-}
 
 
 @media screen and (max-width: 1280px) {
+    img {
+        width: 80px;
+        height: auto;
+        border-radius: 8px;
+    }
 
 }
 
