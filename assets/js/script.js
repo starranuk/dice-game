@@ -184,7 +184,7 @@ function runGame(gameType) {
 		document.getElementById("dice-4").innerHTML = image4;
         const image5 = `<img src="assets/images/dice${num5}.png" alt="${num5}">`;
 		document.getElementById("dice-5").innerHTML = image5;
-        const image6 = `<img src="assets/images/dice${num6}.png" alt="${num5}">`;
+        const image6 = `<img src="assets/images/dice${num6}.png" alt="${num6}">`;
 		document.getElementById("dice-6").innerHTML = image6;
         dice1.dataset.opval = `${strnum1}`;
 		dice2.dataset.opval = `${strnum2}`;
@@ -243,17 +243,17 @@ let operand6 = parseInt(number6);
 let calcLevel = document.getElementById('level').innerText;
     
     if (calcLevel === 'level-1') {
-        return [operand1, "level-1"];
+        return [operand1, 'level-1'];
 	} else if(calcLevel === 'level-2') {
-		return [operand1 + operand2, "level-2"];
+		return [operand1 + operand2, 'level-2'];
     } else if(calcLevel === 'level-3') {
-        return [(operand1 + operand2) + operand3, "level-3"];
+        return [(operand1 + operand2) + operand3, 'level-3'];
 	} else if(calcLevel === 'level-4') {
-        return [(operand1 + operand2 + operand3 + operand4), "level-4"];
+        return [(operand1 + operand2 + operand3 + operand4), 'level-4'];
 	} else if(calcLevel === 'level-5') {
-        return [(operand1 + operand2 + operand3 + operand4 + operand5), "level-5"];
+        return [(operand1 + operand2 + operand3 + operand4 + operand5), 'level-5'];
 	} else if(calcLevel === 'level-6') {
-        return [(operand1 + operand2 + operand3 + operand4 + operand5 + operand6), "level-6"];
+        return [(operand1 + operand2 + operand3 + operand4 + operand5 + operand6), 'level-6'];
        } else {
         alert(`Unimplemented operator ${operator}`);
         throw `Unimplemented operator ${operator}. Aborting!`;
