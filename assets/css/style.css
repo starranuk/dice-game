@@ -93,7 +93,9 @@ img {
     transition: all 0.5s;
 }
 
-
+.bi-dice-2-fill {
+    color: white;
+}
 
 .bi-dice-2-fill {
     color: green;
