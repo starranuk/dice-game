@@ -206,7 +206,9 @@ function runGame(gameType) {
 }
 
 /**
- * Checks the answer against the calculateCorrectAnswer array
+ * Gets the points allocated dependant on Level being played directly from the DOM. 
+ * Checks the answer against the calculateCorrectAnswer array and displays the players name, players answer, whether the answer is correct, 
+ * the correct answer and the points won or lost
  */
 function checkAnswer() {
     let roundpoints = roundScore.dataset.scoreValue;
@@ -228,9 +230,8 @@ function checkAnswer() {
 }
 
 /**
- * Gets the operands (the numbers) 
- * directly from the dom, and returns the correct answer. These are only used for calculations and are not displayed. 
- *They still need to be in the dom color is set to background
+ * Gets the operands (the numbers) as a string directly from the dom, converts them to integers
+ * and returns the correct answer. 
  */
 function addDice(gameType) {
     // Converts string from HTML data attribute to integer 
