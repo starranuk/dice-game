@@ -89,6 +89,7 @@ function runGame(gameType) {
         const image6 = `<img src="assets/images/blank.png">`;
         document.getElementById("dice-6").innerHTML = image6;
         dice1.dataset.opval = `${strnum1}`;
+        roundScore.dataset.scoreValue = `${"1"}`;
 
     } else if (gameType === "level-2") {
         const gameLevel = gameType;
@@ -107,6 +108,7 @@ function runGame(gameType) {
         document.getElementById("dice-6").innerHTML = image6;
         dice1.dataset.opval = `${strnum1}`;
         dice2.dataset.opval = `${strnum2}`;
+        roundScore.dataset.scoreValue = `${"2"}`;
 
 
     } else if (gameType === "level-3") {
@@ -127,6 +129,7 @@ function runGame(gameType) {
         dice1.dataset.opval = `${strnum1}`;
         dice2.dataset.opval = `${strnum2}`;
         dice3.dataset.opval = `${strnum3}`;
+        roundScore.dataset.scoreValue = `${"3"}`;
 
 
     } else if (gameType === "level-4") {
@@ -148,6 +151,7 @@ function runGame(gameType) {
         dice2.dataset.opval = `${strnum2}`;
         dice3.dataset.opval = `${strnum3}`;
         dice4.dataset.opval = `${strnum4}`;
+        roundScore.dataset.scoreValue = `${"4"}`;
 
     } else if (gameType === "level-5") {
         const gameLevel = gameType;
@@ -169,6 +173,7 @@ function runGame(gameType) {
         dice3.dataset.opval = `${strnum3}`;
         dice4.dataset.opval = `${strnum4}`;
         dice5.dataset.opval = `${strnum5}`;
+        roundScore.dataset.scoreValue = `${"5"}`;
 
     } else if (gameType === "level-6") {
         const gameLevel = gameType;
@@ -191,6 +196,7 @@ function runGame(gameType) {
         dice4.dataset.opval = `${strnum4}`;
         dice5.dataset.opval = `${strnum5}`;
         dice6.dataset.opval = `${strnum6}`;
+        roundScore.dataset.scoreValue = `${"6"}`;
 
     } else {
         alert(`Unknown game type: ${gameType}`);
@@ -203,16 +209,17 @@ function runGame(gameType) {
  * Checks the answer against the calculateCorrectAnswer array
  */
 function checkAnswer() {
+    let roundpoints = roundScore.dataset.scoreValue;
 	let player = document.getElementById("name-box").value;
     let userAnswer = parseInt(document.getElementById("answer-box").value);
     let correctAnswer = addDice();
     let isCorrect = userAnswer === correctAnswer[0];
 
     if (isCorrect) {
-        Swal.fire(`Well done ${player}, ${userAnswer} is the correct answer`);
+        Swal.fire(`Well done ${player}, ${userAnswer} is the correct answer. You scored ${roundpoints}`);
         incrementScore();
     } else {
-        Swal.fire(`Sorry ${userAnswer} is incorrect. The dice add up to ${correctAnswer[0]} Have another go ${player}, you can do it`);
+        Swal.fire(`Sorry ${userAnswer} is incorrect. The dice add up to ${correctAnswer[0]}, the Computer has scored ${roundpoints}.  Have another go ${player}, you can do it`);
         incrementWrongAnswer();
     }
 
@@ -261,21 +268,25 @@ function addDice(gameType) {
 }
 
 /**
- * Gets the current score from the DOM and increments it by 1
+ * Gets the current score from the DOM and increments it by the points allocated to that level
  */
-function incrementScore() {
-
-    let rollingScore = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText = ++rollingScore;
+ function incrementScore() {
+	let roundpoints = roundScore.dataset.scoreValue;
+	let points = parseInt(roundpoints);
+	
+    let rollingScore = parseInt(document.getElementById("score").innerText) + points;
+    document.getElementById("score").innerText = rollingScore;
 
 }
 
 /**
- * Gets the current tally of incorrect answers from the DOM and increments it by 1
+ * Gets the current tally of incorrect answers from the DOM and increments it by the points allocated to that level
  */
 function incrementWrongAnswer() {
+	let roundpoints = roundScore.dataset.scoreValue;
+	let points = parseInt(roundpoints);
 
-    let rollingScore = parseInt(document.getElementById("incorrect").innerText);
-    document.getElementById("incorrect").innerText = ++rollingScore;
-
+    let rollingScore = parseInt(document.getElementById("incorrect").innerText) + points;
+    document.getElementById("incorrect").innerText = rollingScore;
+    
 }
