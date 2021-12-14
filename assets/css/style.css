@@ -13,6 +13,26 @@ body {
     margin-right: auto;
 }
 
+#top, #bottom, #left, #right {
+	background: #4c1580;
+	position: fixed;
+    border-radius: 5px;
+	}
+	#left, #right {
+		top: 0; bottom: 0;
+		width: 15px;
+        
+		}
+		#left { left: 0; }
+		#right { right: 0; }
+		
+	#top, #bottom {
+		left: 0; right: 0;
+		height: 15px;
+		}
+		#top { top: 0; }
+		#bottom { bottom: 0; }
+
 .heading {
     text-align: center;
     font-size: 2.5rem;
@@ -33,6 +53,7 @@ body {
     margin-right: auto;
     padding: 1%;
 }
+
 
 #players-score {
   
@@ -57,14 +78,17 @@ body {
 	color: black;
 }
 
-.bi-emoji-frown {
+.bi-pc-display-horizontal {
 	color: red;
 }
 
 .scores div {
 	 display: inline;
 }
-
+ #name-box {
+    border: 2px solid red;
+    border-radius: 5px;
+ }
 
 .flex-container {
     display: flex;
@@ -87,6 +111,11 @@ img {
 
 .display-dice span {
     padding: 0 15px;
+}
+
+#answer-box {
+    border: 2px solid rgb(45, 12, 121);
+    border-radius: 5px;
 }
 /* --------- Buttons */
 .bi {
@@ -119,6 +148,8 @@ img {
     color: yellow;
 }
 
+
+
 /* --------- Media queries */
 
 
@@ -138,6 +169,10 @@ img {
         width: 70px;
         height: auto;
         border-radius: 8px;
+    }
+
+    #sub-button {
+        font-size: 1.0rem;
     }
     
 }

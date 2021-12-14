@@ -20,6 +20,11 @@
 	  <link rel="stylesheet" href="sweetalert2.min.css">
    </head> 
    <body>
+	<div id="left"></div>
+	<div id="right"></div>
+	<div id="top"></div>
+	<div id="bottom"></div>
+	<br>
 	   <header>
     <h1 class="heading">
         <img class="dicey-logo" src="assets/images/dice6.png" alt="dicey logo"> Dicey
@@ -27,7 +32,7 @@
 	<h2 class = "player-scores">Player Scores</h2>
 	<div class = "flex-container">
         <div id="players-score"><p class="scores"><i class="bi bi-emoji-sunglasses"></i>    <span id="score">0</span></p></div>
-        <div id="computers-score"><p class="scores"><i class="bi bi-emoji-frown"></i>    <span id="incorrect">0</span></p></div>	
+        <div id="computers-score"><p class="scores"><i class="bi bi-pc-display-horizontal"></i>    <span id="incorrect">0</span></p></div>	
     </div>
 	 <!-- game reset button with warning if using a PC/Keyboard and Mouse-->
 	 	<button data-type = "reset" type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Careful if you Reset the Game you will lose your score</button>">Reset the Game</button>
@@ -91,13 +96,13 @@
     </div>
 	<br>
 
-	<button type="button" data-type = "submit" class="btn btn-primary btn-lg btn-block">Submit your answer!</button>
+	<button id ="sub-button" type="button" data-type = "submit" class="btn btn-primary btn-lg btn-block">Submit your answer!</button>
 	<br>
 
     <script src="assets/js/script.js"></script>
 	<footer>
 		<h4>Game Instructions</h4>
-		Please enter your name
+		
 	</footer>
    </body>
 </html>

@@ -18,7 +18,7 @@
                 }).then((result) => {
                     if (result.isConfirmed) {
                         Swal.fire(
-                            'Deconsted!',
+                            'Your Game Settings Have Been Deleted',
                             'Your file has been delete.',
                             'success'
                         )
