@@ -39,7 +39,7 @@
 	</header>
 	<br>
 	<h4 class ="player-name">Enter Your Name</h4>
-        <input id = "name-box" type = "text">
+        <input id = "name-box" type = "text" alt = "enter your name">
 	<!--This project was inspired by the Code Institute Love Maths walk through by AJGreaves.  
  * The page loads and event listeners wait for button actions triggered by the user.-->
     <!-- Bootstrap Font Icons-->
@@ -47,22 +47,22 @@
 	
 		<div class = "select-level" >
 			<h3>Game Levels - 1 is Easy 6 is Hard</h3>
-			<button data-type = "level-1" alt = "game level 1">
+			<button data-type = "level-1" aria-label = "game level 1">
 				<i class="bi bi-dice-1-fill"></i>
 			</button>
-			<button data-type = "level-2" alt = "game level 2">
+			<button data-type = "level-2" aria-label = "game level 2">
 				<i class="bi bi-dice-2-fill"></i>
 			</button>
-			<button data-type = "level-3" alt = "game level 3">               
+			<button data-type = "level-3" aria-label = "game level 3">               
 				<i class="bi bi-dice-3-fill"></i>
 			</button>
-			<button data-type = "level-4" alt = "game level 4">
+			<button data-type = "level-4" aria-label = "game level 4">
 				<i class="bi bi-dice-4-fill"></i>
 			</button>
-			<button data-type = "level-5" alt = "game level 5">
+			<button data-type = "level-5" aria-label = "game level 5">
 				<i class="bi bi-dice-5-fill"></i>
 			</button>
-			<button data-type = "level-6" alt = "game level 6">
+			<button data-type = "level-6" aria-label = "game level 6">
 				<i class="bi bi-dice-6-fill"></i>
 			</button>
 		</div>
@@ -92,11 +92,11 @@
 		<span id="roundScore" data-scoreValue=""></span> 
         
         <p class = "answer">Have you worked it out yet?</p>
-        <input id = "answer-box" type = "number">
+        <input id = "answer-box" type = "number" alt = "enter your answer">
     </div>
 	<br>
 
-	<button id ="sub-button" type="button" data-type = "submit" class="btn btn-primary btn-lg btn-block">Submit your answer!</button>
+	<button id ="sub-button" type="button" data-type = "submit" class="btn btn-primary btn-lg btn-block" aria-label = "submit your answer">Submit your answer!</button>
 	<br>
 
     <script src="assets/js/script.js"></script>
