@@ -141,57 +141,61 @@ img {
 }
 
 @media screen and (max-width: 414px) {
-.dicey-logo {
-	display: none;
-}
+    .dicey-logo {
+        display: none;
+    }
 
-.heading {
-	font-size: 2rem;
-}
+    .heading {
+        font-size: 2rem;
+    }
 
-#score {
-    font-size: 1.5rem;
-}
+    #score {
+        font-size: 1.5rem;
+    }
 
-#incorrect {
-    font-size: 1.5rem;
-}
+    #incorrect {
+        font-size: 1.5rem;
+    }
 
-.bi {
-    font-size: 2rem;
-}
+    .bi {
+        font-size: 2rem;
+    }
 
-img {
-	width: 50px;
-	height: auto;
-	border-radius: 6px;
-}
+    h3 {
+        font-size: 80%;
+    }
 
-@media (max-width: 360px) {
-	
-.dicey-logo {
-	display: none;
-}
+    img {
+        width: 50px;
+        height: auto;
+        border-radius: 6px;
+    }
 
-.heading {
-	font-size: 1.5rem;
-}
+    @media (max-width: 360px) {
+        
+    .dicey-logo {
+        display: none;
+    }
 
-#score {
-    font-size: 1.5rem;
-}
+    .heading {
+        font-size: 1.5rem;
+    }
 
-#incorrect {
-    font-size: 1.5rem;
-}
+    #score {
+        font-size: 1.5rem;
+    }
 
-.bi {
-    font-size: 1.5rem;
-}
+    #incorrect {
+        font-size: 1.5rem;
+    }
 
-}
- 	img {
-	width: 45px;
-	height: auto;
-	border-radius: 4px;
-}
+    .bi {
+        font-size: 1.5rem;
+    }
+
+    }
+        img {
+        width: 45px;
+        height: auto;
+        border-radius: 4px;
+    }
