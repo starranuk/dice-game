@@ -9,18 +9,18 @@
             if (this.getAttribute("data-type") === "reset") {
                 Swal.fire({
                     title: 'Are you sure?',
-                    text: "You won't be able to revert this!",
+                    text: "You won't be able to undo this action and will lose your scores!",
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes, delete it!'
+                    confirmButtonText: 'Yes, reset the game!'
                 }).then((result) => {
                     if (result.isConfirmed) {
                         Swal.fire(
                             'Your Game Settings Have Been Deleted',
-                            'Your file has been delete.',
                             'success'
+                            
                         )
                         location.reload();
                     }
@@ -218,10 +218,10 @@ function checkAnswer() {
     let isCorrect = userAnswer === correctAnswer[0];
 
     if (isCorrect) {
-        Swal.fire(`Well done ${player}, ${userAnswer} is the correct answer. You scored ${roundpoints}`);
+        Swal.fire(`Well done ${player}, ${userAnswer} is the correct answer. Your points score is ${roundpoints}`);
         incrementScore();
     } else {
-        Swal.fire(`Sorry ${userAnswer} is incorrect. The dice add up to ${correctAnswer[0]}, the Computer has scored ${roundpoints}.  Have another go ${player}, you can do it`);
+        Swal.fire(`Sorry ${userAnswer} is incorrect. The dice add up to ${correctAnswer[0]}, Your points score ${roundpoints} goes to the Computer .  Have another go ${player}, you can do it`);
         incrementWrongAnswer();
     }
 
