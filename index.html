@@ -20,14 +20,11 @@
 	  <link rel="stylesheet" href="sweetalert2.min.css">
    </head> 
    <body>
-	<div id="left"></div>
-	<div id="right"></div>
-	<div id="top"></div>
-	<div id="bottom"></div>
+	
 	<br>
 	   <header>
     <h1 class="heading">
-        <img class="dicey-logo" src="assets/images/dice6.png" alt="dicey logo"> Dicey
+        <img class="dicey-logo" src="assets/images/dice6.png" alt="add the dots logo"> Add the Dots
     </h1>
 	<h2 class = "player-scores">Player Scores</h2>
 	<div class = "flex-container">
@@ -39,7 +36,7 @@
 	</header>
 	<br>
 	<h4 class ="player-name">Enter Your Name</h4>
-        <input id = "name-box" type = "text" alt = "enter your name">
+        <input id = "name-box" type =  alt = "enter your name" autofocus>
 	<!--This project was inspired by the Code Institute Love Maths walk through by AJGreaves.  
  * The page loads and event listeners wait for button actions triggered by the user.-->
     <!-- Bootstrap Font Icons-->
@@ -91,7 +88,7 @@
 		<span id="dice6" data-opval=""></span>
 		<span id="roundScore" data-scoreValue=""></span> 
         
-        <p class = "answer">Have you worked it out yet?</p>
+        <p class = "answer">Answer below</p>
         <input id = "answer-box" type = "number" alt = "enter your answer">
     </div>
 	<br>
@@ -101,7 +98,14 @@
 
     <script src="assets/js/script.js"></script>
 	<footer>
-		<h4>Game Instructions</h4>
+		<div class="popup" onclick="myFunction()">How to play
+            <span class="popuptext" id="myPopup">
+			<p>Game Instructions</p>
+			<p>Enter your name</p>
+			<p>Select a level</p>
+			<p>Add the dice together</p>
+			<p>Enter your answer and press the submit button</p></span
+    </div> 
 		
 	</footer>
    </body>

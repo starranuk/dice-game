@@ -14,25 +14,6 @@ body {
     margin-right: auto;
 }
 
-#top, #bottom, #left, #right {
-	background: #4c1580;
-	position: fixed;
-    border-radius: 5px;
-	}
-	#left, #right {
-		top: 0; bottom: 0;
-		width: 15px;
-        
-		}
-		#left { left: 0; }
-		#right { right: 0; }
-		
-	#top, #bottom {
-		left: 0; right: 0;
-		height: 15px;
-		}
-		#top { top: 0; }
-		#bottom { bottom: 0; }
 
 .heading {
     text-align: center;
@@ -94,11 +75,13 @@ body {
  }
 
 .flex-container {
+    background-color: rgb(228, 212, 212);
     display: flex;
     flex-wrap: wrap;
     flex-direction: row ;
 	justify-content: center;
 	align-items: center;
+    
   }
   
 
@@ -153,7 +136,64 @@ img {
     color: yellow;
 }
 
-
+/*Footer*/
+/* Ref popup code - https://www.w3schools.com/howto/howto_js_popup.asp*/
+/* Popup container - can be anything you want */
+.popup {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+	visibility: hidden;
+	width: 300px;
+	background-color: #555;
+	color: #fff;
+	text-align: left;
+	border-radius: 6px;
+	padding: 8px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: rgb(190, 178, 241) transparent transparent transparent;
+  }
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+	visibility: visible;
+	-webkit-animation: fadeIn 1s;
+	animation: fadeIn 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+	from {opacity: 0;} 
+	to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity:1 ;}
+  }
 
 /* --------- Media queries */
 
@@ -179,6 +219,10 @@ img {
     #sub-button {
         font-size: 1.0rem;
     }
+
+    #level {
+        font-size: 70%;
+    }
     
 }
 
@@ -197,6 +241,10 @@ img {
 
     #incorrect {
         font-size: 1.5rem;
+    }
+
+    #level {
+        font-size: 50%;
     }
 
     .bi {
@@ -223,12 +271,20 @@ img {
         font-size: 1.5rem;
     }
 
+    .player-scores {
+        font-size: 1.2rem;
+    }
+
     #score {
         font-size: 1.5rem;
     }
 
     #incorrect {
         font-size: 1.5rem;
+    }
+
+    #level {
+        font-size: 90%;
     }
 
     .bi {
