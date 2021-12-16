@@ -25,6 +25,25 @@
                         location.reload();
                     }
                 })
+            } else if (this.getAttribute("data-type") === "instructions") {
+                Swal.fire({
+                    title: '<strong><u>Game Instructions</u></strong>',
+                    icon: 'info',
+                    html:
+                    '<p>Enter your name</p> ' +
+                    '<p>Select a level</p> ' +
+                    '<p>Add the dice together</p>' +
+                    '<p>Enter your answer and press the submit button</p>',
+                    showCloseButton: true,
+                    showCancelButton: false,
+                    focusConfirm: false,
+                    confirmButtonText:
+                      '<i class="fa fa-thumbs-up"></i> Great!',
+                    confirmButtonAriaLabel: 'Thumbs up, great!',
+                    cancelButtonText:
+                      '<i class="fa fa-thumbs-down"></i>',
+                    cancelButtonAriaLabel: 'Thumbs down'
+                  })
             } else if (this.getAttribute("data-type") === "submit") {
                 checkAnswer();
             } else {

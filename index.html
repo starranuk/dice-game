@@ -4,8 +4,11 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Dicey | Home</title>
-	  <!--sweetalert2 -->
+	  <meta name="description" content="add the dots, counting game, random dice">
+      <meta name="keywords" content="addition, counting, adding, adding game ">
+      <meta name="author" content="Stan Tarran">
+      <title>Add the Dots | Home</title>
+	  <!--sweetalert2 CDN-->
 	     
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.9/sweetalert2.min.css" integrity="sha512-cyIcYOviYhF0bHIhzXWJQ/7xnaBuIIOecYoPZBgJHQKFPo+TOBA+BY1EnTpmM8yKDU4ZdI3UGccNGCEUdfbBqw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -31,12 +34,13 @@
         <div id="players-score"><p class="scores"><i class="bi bi-emoji-sunglasses"></i>    <span id="score">0</span></p></div>
         <div id="computers-score"><p class="scores"><i class="bi bi-pc-display-horizontal"></i>    <span id="incorrect">0</span></p></div>	
     </div>
-	 <!-- game reset button with warning if using a PC/Keyboard and Mouse-->
+	 <!-- Game Instructions and Game reset button with warning if using a PC/Keyboard and Mouse-->
+	 	<button data-type = "instructions" type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Game Instructions">Game Instructions</button>
 	 	<button data-type = "reset" type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Careful if you Reset the Game you will lose your score</button>">Reset the Game</button>
 	</header>
 	<br>
-	<h4 class ="player-name">Enter Your Name</h4>
-        <input id = "name-box" type =  alt = "enter your name" autofocus>
+	<h4 class ="player-name"></h4>
+        <input id = "name-box" type = "text" alt = "enter your name" placeholder="Please enter your name" required>
 	<!--This project was inspired by the Code Institute Love Maths walk through by AJGreaves.  
  * The page loads and event listeners wait for button actions triggered by the user.-->
     <!-- Bootstrap Font Icons-->
@@ -98,14 +102,6 @@
 
     <script src="assets/js/script.js"></script>
 	<footer>
-		<div class="popup" onclick="myFunction()">How to play
-            <span class="popuptext" id="myPopup">
-			<p>Game Instructions</p>
-			<p>Enter your name</p>
-			<p>Select a level</p>
-			<p>Add the dice together</p>
-			<p>Enter your answer and press the submit button</p></span
-		</div> 
 		
 	</footer>
    </body>
