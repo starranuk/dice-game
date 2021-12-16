@@ -35,11 +35,13 @@
         <div id="computers-score"><p class="scores"><i class="bi bi-pc-display-horizontal"></i>    <span id="incorrect">0</span></p></div>	
     </div>
 	 <!-- Game Instructions and Game reset button with warning if using a PC/Keyboard and Mouse-->
+	 <div class="btn-group">
 	 	<button data-type = "instructions" type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Game Instructions">Game Instructions</button>
-	 	<button data-type = "reset" type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Careful if you Reset the Game you will lose your score</button>">Reset the Game</button>
+	 	<button data-type = "reset" type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Careful if you Reset the Game you will lose your score</button>"> Reset the Game </button>
+	</div>
 	</header>
 	<br>
-	<h4 class ="player-name"></h4>
+	<label aria-label="Player Name"></label>
         <input id = "name-box" type = "text" alt = "enter your name" placeholder="Please enter your name" required>
 	<!--This project was inspired by the Code Institute Love Maths walk through by AJGreaves.  
  * The page loads and event listeners wait for button actions triggered by the user.-->
@@ -92,17 +94,15 @@
 		<span id="dice6" data-opval=""></span>
 		<span id="roundScore" data-scoreValue=""></span> 
         
-        <p class = "answer">Answer below</p>
-        <input id = "answer-box" type = "number" alt = "enter your answer">
+        <label aria-label="What number do the dice add up to?"></label>
+        <input id = "answer-box" type = "number" placeholder="The dice add up to?"  alt = "Enter your answer">
     </div>
 	<br>
-
 	<button id ="sub-button" type="button" data-type = "submit" class="btn btn-primary btn-lg btn-block" aria-label = "submit your answer">Submit your answer!</button>
 	<br>
-
     <script src="assets/js/script.js"></script>
 	<footer>
-		
+		<p>Copyright © Dicey Game Design Ltd</p>
 	</footer>
    </body>
 </html>
