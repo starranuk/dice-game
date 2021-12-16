@@ -190,6 +190,14 @@ img {
         font-size: 50%;
     }
 
+    #name-box {
+        width: 80%;
+    }
+
+    #answer-box {
+        width: 80%;
+    }
+
     .bi {
         font-size: 1.5rem;
     }
