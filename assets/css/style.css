@@ -139,9 +139,11 @@ img {
         border-radius: 8px;
     }
 
+    
+
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 1080px) {
     img {
         width: 70px;
         height: auto;
@@ -152,13 +154,10 @@ img {
         font-size: 1.0rem;
     }
 
-    #level {
-        font-size: 70%;
-    }
-    
+   
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 653px) {
     .dicey-logo {
         display: none;
     }
@@ -176,7 +175,7 @@ img {
     }
 
     #level {
-        font-size: 50%;
+        font-size: 80%;
     }
 
     #name-box {
@@ -236,5 +235,9 @@ img {
         width: 45px;
         height: auto;
         border-radius: 4px;
+    }
+
+    #copyright {
+        font-size: 1rem;
     }
 }
