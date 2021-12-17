@@ -1,9 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Merienda+One|Open+Sans&display=swap");
-{
-	margin:0;
-	padding:0px;
-	border:0;
-}
 
 body {
     background-color: rgb(228, 212, 212);
@@ -13,7 +8,6 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-
 
 .heading {
     text-align: center;
@@ -35,7 +29,6 @@ body {
     margin-right: auto;
     padding: 1%;
 }
-
 
 #players-score {
   
@@ -83,7 +76,6 @@ body {
 	align-items: center;
   }
   
-
 img {
     border-radius: 12px;
   }
@@ -139,9 +131,6 @@ img {
 
 
 /* --------- Media queries */
-
-
-
 
 @media screen and (max-width: 1280px) {
     img {
@@ -248,3 +237,4 @@ img {
         height: auto;
         border-radius: 4px;
     }
+}
