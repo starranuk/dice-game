@@ -88,11 +88,12 @@ img {
   padding: 0 15px;
 }
 
-#answer-box {
+#answer-field {
   font-size: 1.5rem;
   border: 2px solid red;
   border-radius: 5px;
   background-color: aqua;
+  width: 200px;
 }
 /* --------- Buttons */
 .bi {
@@ -174,7 +175,7 @@ img {
     width: 80%;
   }
 
-  #answer-box {
+  #answer-field {
     width: 80%;
   }
 
@@ -227,7 +228,7 @@ img {
     border-radius: 4px;
   }
 
-  #copyright {
+  .footer-text {
     font-size: 1rem;
   }
 }

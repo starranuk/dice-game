@@ -53,7 +53,7 @@
 		});
 
 	}
-	document.getElementById("answer-box").addEventListener("keydown", function(event) {
+	document.getElementById("answer-field").addEventListener("keydown", function(event) {
 		if (event.key === "Enter") {
 			checkAnswer();
 		}
@@ -70,8 +70,8 @@
  **/
 function runGame(gameType) {
 
-	document.getElementById("answer-box").value = "";
-	document.getElementById("answer-box").focus();
+	document.getElementById("answer-field").value = "";
+	document.getElementById("answer-field").focus();
 
 	// Creates random numbers between 1 and 6
 	const num1 = Math.floor(Math.random() * 6) + 1;
@@ -233,7 +233,7 @@ function runGame(gameType) {
 function checkAnswer() {
 	let roundpoints = roundScore.dataset.scoreValue;
 	let player = document.getElementById("name-box").value;
-	let userAnswer = parseInt(document.getElementById("answer-box").value);
+	let userAnswer = parseInt(document.getElementById("answer-field").value);
 	let correctAnswer = addDice();
 	let isCorrect = userAnswer === correctAnswer[0];
 
