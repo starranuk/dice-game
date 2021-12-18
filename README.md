@@ -20,14 +20,22 @@ The game is played on a single page which displays:
    pop-up modals that display whether the player has entered the correct
    answer .
  - The six game level buttons:
+
+![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/levels.png)
+
+**Random numbers for the dice are generated each time:**
+
+ - The browser is refreshed.
+ - The game is reset.
+ - A game level button is pressed.
+ - The Submit button is pressed.
+
 	 - Level 1 is a single dice absolute beginners level where a player only needs 	to count the dots on the dice. A correct Level 1 answer is worth one point.
 	 - Level 2 generates two dice and is worth two points.
 	 - Level 3 generates two dice and is worth three points.
 	 - Level 4 generates two dice and is worth four points.
 	 - Level 5 generates two dice and is worth five points.
 	 - Level 6 generates two dice and is worth six points.
- - The Answer box and Submit button
- - Game Instructions in the Footer
 
 **The goals of "Add the Dots"**
 
@@ -64,17 +72,24 @@ The site is a single page with the Header containing the branding, player scores
  - Branding Logo
  - Game title "Add the Dots"
  - The Player and Computer score icons and scores.
- - A reset button and pop-up "sweetalert2" which contains a warning
+ - Game Instructions via pop-up "sweetalert2" .
 
 ![Game Instructions](https://starranuk.github.io/dice-game/assets/readme_files/game-inst.png)
 
- - A reset button and pop-up "sweetalert2" which contains a warning
- - ![Reset Alert Message](https://starranuk.github.io/dice-game/assets/readme_files/resetalert.png)
+ - A reset button and pop-up "sweetalert2" which contains a warning that the reset action can't be undone and that they will lose their scores.
+
+
+![Reset Alert Message](https://starranuk.github.io/dice-game/assets/readme_files/resetalert.png)
  - An input field for the player to add their name. This is used when updating the player as to whether their answer was correct or incorrect.
- A correct answer displays: 
- ![A correct answer displays](https://starranuk.github.io/dice-game/assets/readme_files/correct.png)
- A incorrect answer displays: 
- ![A incorrect answer displays](https://starranuk.github.io/dice-game/assets/readme_files/incorrect.png)
+![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/name.png)
+
+
+ A correct answer displays: ![A correct answer displays](https://starranuk.github.io/dice-game/assets/readme_files/correct.png)
+ A incorrect answer displays: ![A incorrect answer displays](https://starranuk.github.io/dice-game/assets/readme_files/incorrect.png)
+
+Game Level buttons
+![Game Levels](https://starranuk.github.io/dice-game/assets/readme_files/levels.png)
+
 
 **Footer**
 The footer contains:
@@ -116,10 +131,10 @@ To combat this I updated the system to award 1 point for level 1, 2 points for l
 The responsive ranges targeted were:
 
  - For Handheld Touchscreens with screen max-width: 1280px
- - For Handheld Touchscreens with screen max-width: 1080px
+ -  For Handheld Touchscreens with screen max-width: 1080px
  - Mobile phones with screen max-width: 653px
  - Mobile phones with screen max-width: 360px
- - 
+
 **Responsiveness Testing**
 
 Testing was initially carried using the Chrome Developer Tools using the responsive ranges listed above. Further developer tool testing was carried out using the Firefox and Microsoft Edge developer tools.
@@ -150,7 +165,8 @@ Initial tests showed that :
  
  Accessibility was improved adding alt and aria-label's and by altering background contrasts, font colours.
 
-SEO was improved by improving the Metafile content 
+SEO was improved by improving the Metafile content.
+![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/final-test.png) 
 
 
 
@@ -210,11 +226,12 @@ Although no direct contact is initially predicted a contact email address is pro
 Initially some errors were picked up by the Validator, these ranged from Elements with no closing tags, elements such as iframe which required a title to double ups on alt attributes. However, as the Validator tells you what thee error is and on what line code is easily resolved.
 The following images are the pass results for all three pages:
 
-**Home Page**
-
-
+**Game Page**
+**HTML Validation**
+![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/htmlChecker.png)
 **CSS Validation**
 Although a few parsing errors were picked up initially these were resolved and the CSS code has now passed W3C validation with permission to embed their logo's if required.
+![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/W3CSSValidator.png)
 
 
 
@@ -261,7 +278,15 @@ Forking the GitHub Repository
  - Alan at Tutor support
  - Code Institute Love Maths walk through by AJGreaves tutorial.
  - W3Schools - for code and snippets
- - Stack Overflow - for code snippets
+ 
+
+
+
+
+
+
+
+
 
 
 
