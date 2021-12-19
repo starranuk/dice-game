@@ -47,8 +47,8 @@
 			} else if (this.getAttribute("data-type") === "submit") {
 				checkAnswer();
 			} else {
-				const gameType = this.getAttribute("data-type");
-				runGame(gameType);
+				const gameLevel = this.getAttribute("data-type");
+				runLevel(gameLevel);
 			}
 		});
 
@@ -59,7 +59,7 @@
 		}
 	});
 
-	runGame('level-1');
+	runLevel('level-1');
 
 
 });
@@ -68,7 +68,7 @@
  * The level 1 game with single dice called when the script is first loaded
  * and after the user's answer has been processed
  **/
-function runGame(gameType) {
+function runLevel(gameLevel) {
 
 	document.getElementById("answer-field").value = "";
 	document.getElementById("answer-field").focus();
@@ -93,9 +93,9 @@ function runGame(gameType) {
      * Pushes the converted integer to a string to the DOM.
      * Sets the different scoring for each game level.
 	 * */
-	if (gameType === "level-1") {
-		const gameLevel = gameType;
-		document.getElementById("level").innerHTML = gameLevel;
+	if (gameLevel === "level-1") {
+		const levelNum = gameLevel;
+		document.getElementById("level").innerHTML = levelNum;
 		const image1 = `<img src="assets/images/dice${num1}.png" alt="${num1}">`;
 		document.getElementById("dice-1").innerHTML = image1;
 		const image2 = `<img src="assets/images/blank.png" alt="blank to clear cache">`;
@@ -111,9 +111,9 @@ function runGame(gameType) {
 		dice1.dataset.opval = `${strnum1}`;
 		roundScore.dataset.scoreValue = `${"1"}`;
 
-	} else if (gameType === "level-2") {
-		const gameLevel = gameType;
-		document.getElementById("level").innerHTML = gameLevel;
+	} else if (gameLevel === "level-2") {
+		const levelNum = gameLevel;
+		document.getElementById("level").innerHTML = levelNum;
 		const image1 = `<img src="assets/images/dice${num1}.png" alt="${num1}">`;
 		document.getElementById("dice-1").innerHTML = image1;
 		const image2 = `<img src="assets/images/dice${num2}.png" alt="${num2}">`;
@@ -131,9 +131,9 @@ function runGame(gameType) {
 		roundScore.dataset.scoreValue = `${"2"}`;
 
 
-	} else if (gameType === "level-3") {
-		const gameLevel = gameType;
-		document.getElementById("level").innerHTML = gameLevel;
+	} else if (gameLevel === "level-3") {
+		const levelNum = gameLevel;
+		document.getElementById("level").innerHTML = levelNum;
 		const image1 = `<img src="assets/images/dice${num1}.png" alt="${num1}">`;
 		document.getElementById("dice-1").innerHTML = image1;
 		const image2 = `<img src="assets/images/dice${num2}.png" alt="${num2}">`;
@@ -152,9 +152,9 @@ function runGame(gameType) {
 		roundScore.dataset.scoreValue = `${"3"}`;
 
 
-	} else if (gameType === "level-4") {
-		const gameLevel = gameType;
-		document.getElementById("level").innerHTML = gameLevel;
+	} else if (gameLevel === "level-4") {
+		const levelNum = gameLevel;
+		document.getElementById("level").innerHTML = levelNum;
 		const image1 = `<img src="assets/images/dice${num1}.png" alt="${num1}">`;
 		document.getElementById("dice-1").innerHTML = image1;
 		const image2 = `<img src="assets/images/dice${num2}.png" alt="${num2}">`;
@@ -173,9 +173,9 @@ function runGame(gameType) {
 		dice4.dataset.opval = `${strnum4}`;
 		roundScore.dataset.scoreValue = `${"4"}`;
 
-	} else if (gameType === "level-5") {
-		const gameLevel = gameType;
-		document.getElementById("level").innerHTML = gameLevel;
+	} else if (gameLevel === "level-5") {
+		const levelNum = gameLevel;
+		document.getElementById("level").innerHTML = levelNum;
 		const image1 = `<img src="assets/images/dice${num1}.png" alt="${num1}">`;
 		document.getElementById("dice-1").innerHTML = image1;
 		const image2 = `<img src="assets/images/dice${num2}.png" alt="${num2}">`;
@@ -195,9 +195,9 @@ function runGame(gameType) {
 		dice5.dataset.opval = `${strnum5}`;
 		roundScore.dataset.scoreValue = `${"5"}`;
 
-	} else if (gameType === "level-6") {
-		const gameLevel = gameType;
-		document.getElementById("level").innerHTML = gameLevel;
+	} else if (gameLevel === "level-6") {
+		const levelNum = gameLevel;
+		document.getElementById("level").innerHTML = levelNum;
 		const image1 = `<img src="assets/images/dice${num1}.png" alt="${num1}">`;
 		document.getElementById("dice-1").innerHTML = image1;
 		const image2 = `<img src="assets/images/dice${num2}.png" alt="${num2}">`;
@@ -219,8 +219,8 @@ function runGame(gameType) {
 		roundScore.dataset.scoreValue = `${"6"}`;
 
 	} else {
-		alert(`Unknown game type: ${gameType}`);
-		throw `Unknown game type: ${gameType}. Aborting!`;
+		alert(`Unknown game type: ${gameLevel}`);
+		throw `Unknown game type: ${gameLevel}. Aborting!`;
 	}
 
 }
@@ -245,7 +245,7 @@ function checkAnswer() {
 		incrementWrongAnswer();
 	}
 
-	runGame(correctAnswer[1]);
+	runLevel(correctAnswer[1]);
 
 }
 
@@ -253,7 +253,7 @@ function checkAnswer() {
  * Gets the operands (the numbers) as a string directly from the dom, converts them to integers
  * and returns the correct answer. 
  */
-function addDice(gameType) {
+function addDice(gameLevel) {
 	// Converts string from HTML data attribute to integer 
 	let number1 = dice1.dataset.opval;
 	let number2 = dice2.dataset.opval;
