@@ -60,7 +60,7 @@
 		}
 	});
 	/**
- 	* The level 1 game with single dice is called when the page and script is first loaded.
+ 	* The level 1 game with single dice called when the page and script is first loaded.
  	**/
 	runLevel('level-1');
 
