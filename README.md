@@ -39,7 +39,7 @@ The game is played on a single page which displays:
 
 **The goals of "Add the Dots"**
 
-First to have a little fun and second to start teaching simple addition simply by counting the dots on the dice just as a child would count the fingers on their hands. 
+First to have a little fun and second to start teaching simple addition simply by counting the dots on the dice, just as a child would count the fingers on their hands. 
 
 The player is encouraged to try the harder levels because the number of points  generated increases as they go up the levels. 
 
@@ -48,24 +48,23 @@ The player is encouraged to try the harder levels because the number of points  
 Parents who want to encourage children to start understanding numbers through simple addition.
 
 ## Site Framework
-The site is a single page with the Header containing the branding, player scores, game reset button, player name field and the Footer containing game instructions.
-
-**Responsive layout**
-
- - The sites responsive design retains the style and branding of the
-   site as screen size change.
- - I used the Bootstrap Branded Navbar for the site navigation in the
-   header and a Bootstrap Grid for hire equipment images.
-
+ 
 ### Wire Frame
 
 
 ![Draft Web Page Design](https://starranuk.github.io/dice-game//assets/readme_files/main-wireframe.png)
 
 
-![Mobile Phone ](https://starranuk.github.io/dice-game//assets/readme_files/mobile-wireframe.png)
+![Mobile Phone Draft Responsive Design ](https://starranuk.github.io/dice-game//assets/readme_files/mobile-wireframe.png)
 
 ## Common Features
+The site is a single page with the Header containing the branding, player scores, game reset button, player name field and the Footer containing game instructions.
+
+**Responsive layout**
+
+ - The sites responsive design retains the style and branding of the
+   site as screen size change.
+  
 
 **Header**
 
@@ -81,15 +80,23 @@ The site is a single page with the Header containing the branding, player scores
 
 ![Reset Alert Message](https://starranuk.github.io/dice-game/assets/readme_files/resetalert.png)
  - An input field for the player to add their name. This is used when updating the player as to whether their answer was correct or incorrect.
-![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/name.png)
+![Enter your name](https://starranuk.github.io/dice-game/assets/readme_files/name.png)
 
 
- A correct answer displays: ![A correct answer displays](https://starranuk.github.io/dice-game/assets/readme_files/correct.png)
- A incorrect answer displays: ![A incorrect answer displays](https://starranuk.github.io/dice-game/assets/readme_files/incorrect.png)
 
-Game Level buttons
+**Game Level buttons**
+The game level buttons are Bootstrap Icons/buttons which launch the relevant code within the Javascript Function, The level 1 game with single dice called when the game and script is first loaded. 
 ![Game Levels](https://starranuk.github.io/dice-game/assets/readme_files/levels.png)
-
+Dependant on the level selected the random dice are displayed
+![Random dice](https://starranuk.github.io/dice-game/assets/readme_files/display_dice.png)
+Thee player adds the dots/dice together and enters their answer for their total;
+![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/ans_field_submit.png)
+ 
+ A correct answer displays: 
+ ![A correct answer displays](https://starranuk.github.io/dice-game/assets/readme_files/correct.png)
+ 
+ A incorrect answer displays: 
+ ![A incorrect answer displays](https://starranuk.github.io/dice-game/assets/readme_files/incorrect.png)
 
 **Footer**
 The footer contains:
@@ -167,13 +174,6 @@ Initial tests showed that :
 
 SEO was improved by improving the Metafile content.
 ![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/final-test.png) 
-
-
-
-
-
-
-
 
 
 
@@ -279,14 +279,6 @@ Forking the GitHub Repository
  - Code Institute Love Maths walk through by AJGreaves tutorial.
  - W3Schools - for code and snippets
  
-
-
-
-
-
-
-
-
 
 
 
