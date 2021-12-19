@@ -27,14 +27,14 @@
          </h1>
          <h2 class = "player-scores">Player Scores</h2>
          <div class = "flex-container">
-            <div id="players-score">
-               <p class="scores"><i class="bi bi-emoji-sunglasses"></i>    <span id="score">0</span></p>
+            <div id="game-points">
+               <p class="points"><i class="bi bi-emoji-sunglasses"></i>    <span id="player-points">0</span></p>
             </div>
             <div id="computers-score">
-               <p class="scores"><i class="bi bi-pc-display-horizontal"></i>    <span id="incorrect">0</span></p>
+               <p class="points"><i class="bi bi-pc-display-horizontal"></i>    <span id="comp-points">0</span></p>
             </div>
          </div>
-         <!-- Game Instructions and Game reset button with warning if using a PC/Keyboard and Mouse-->
+         <!-- Game Instructions button and Game Reset button (with warning if using a PC/Keyboard and Mouse)-->
          <div>
             <button data-type = "instructions" type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Game Instructions">Game Instructions</button>
             <button data-type = "reset" type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Careful if you Reset the Game you will lose your score</button>"> Reset  the  Game </button>
@@ -70,7 +70,6 @@
       <!-- Displays Dice  -->
       <div class = "display-dice">
          <h3 id = "level">Level</h3>
-         <!-- Displays Dice  -->
          <div class="flex-container">
             <div id = "dice-1"></div>
             <div id = "dice-2"></div>
@@ -81,7 +80,7 @@
          </div>
       </div>
       <br>
-      <div>
+      <div><!-- Random numbers stored in html data attributes-->
          <span id="dice1" data-opval=""></span>
          <span id="dice2" data-opval=""></span>
          <span id="dice3" data-opval=""></span>
@@ -91,6 +90,7 @@
          <span id="roundScore" data-scoreValue=""></span> 
          <br>
          <label aria-label="What number do the dice add up to?"></label>
+          <!-- Player enters their answer in the input field-->
          <input id = "answer-field" type = "number" placeholder="Answer">
       </div>
       <br>

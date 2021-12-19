@@ -30,11 +30,11 @@ body {
   padding: 1%;
 }
 
-#players-score {
+#game-points {
   text-align: left;
 }
 
-#score {
+#player-points {
   font-size: 3rem;
   color: black;
 }
@@ -47,7 +47,7 @@ body {
   padding-left: 30px;
 }
 
-#incorrect {
+#comp-points {
   font-size: 3rem;
   color: black;
 }
@@ -163,11 +163,11 @@ img {
     font-size: 2rem;
   }
 
-  #score {
+  #player-points {
     font-size: 1.5rem;
   }
 
-  #incorrect {
+  #comp-points {
     font-size: 1.5rem;
   }
 
@@ -206,15 +206,15 @@ img {
       font-size: 1.5rem;
     }
 
-    .player-scores {
+    .player-player-pointss {
       font-size: 1.2rem;
     }
 
-    #score {
+    #player-points {
       font-size: 1.5rem;
     }
 
-    #incorrect {
+    #comp-points {
       font-size: 1.5rem;
     }
 
