@@ -11,7 +11,11 @@ The idea for this site/game came from a game my wife came up with for our 3 year
 In this initial version you play against the computer, if your answer is incorrect the computer receives your points.
 
 **The Game of Add the Dots**
-Initially the game does require the supervision of an adult as the pop-up screens do contain text and information on scores but children do pick up the idea of the game very quickly as the basic idea is simple.
+
+ - Initially the game does require the supervision of an adult as the
+   pop-up screens do contain text and information on scores but children
+   do pick up the idea of the game very quickly as the basic idea is
+   simple.
 
 The game is played on a single page which displays:
  - The branding
@@ -42,20 +46,23 @@ The game is played on a single page which displays:
 
 
 **The goals of "Add the Dots"**
-
-First to have a little fun and second to start teaching simple addition simply by counting the dots on the dice, just as a child would count the fingers on their hands. 
-
-The player is encouraged to try the harder levels because the number of points  generated increases as they go up the levels. 
-
+ - First to have a little fun and second to start teaching simple
+   addition simply by counting the dots on the dice, just as a child
+   would count the fingers on their hands.
+ - The player is encouraged to try the harder levels because the number
+   of points  generated increases as they go up the levels.
 
 **Potential Customers**
-Parents who want to encourage children to start understanding numbers through simple addition.
+
+ - Parents who want to encourage children to start understanding numbers
+   through simple addition.
 
 ## Site Framework
 **Colour list:**
-Main Background rgb(228, 212, 212);
-Main Font colour: #02172b 
-Name and Answer box background colours: aqua with a red border.
+
+ - Main Background rgb(228, 212, 212);
+ - Main Font colour: #02172b
+ - Name and Answer box background colours: aqua with a red border.
 
 **Typography**
 
@@ -72,13 +79,18 @@ Although I imported Google Fonts I have mainly used Arial
 **Wire Frame**
 
 **Single Web page**
+
 ![Draft Web Page Design](https://starranuk.github.io/dice-game//assets/readme_files/main-wireframe.png)
 
 **Mobile Interpretation**
+
 ![Mobile Phone Draft Responsive Design ](https://starranuk.github.io/dice-game//assets/readme_files/mobile-wireframe.png)
 
 ## Features
-The site is a single page with the Header containing the branding, player scores, game instructions, game reset button, player name field and the Footer containing copyright and email address.
+
+ - The site is a single page with the Header containing the branding,
+   player scores, game instructions, game reset button, player name
+   field and the Footer containing copyright and email address.
 
 **Responsive layout**
 
@@ -100,31 +112,57 @@ The site is a single page with the Header containing the branding, player scores
 
 ![Reset Alert Message](https://starranuk.github.io/dice-game/assets/readme_files/resetalert.png)
  
- An input field for the player to add their name. This is used when updating the player as to whether their answer was correct or incorrect. There are no game issues if the player does not enter their name.
+ 
+
+ - An input field for the player to add their name. This is used when
+   updating the player as to whether their answer was correct or
+   incorrect. There are no game issues if the player does not enter
+   their name.
+
 ![Enter your name](https://starranuk.github.io/dice-game/assets/readme_files/name.png)
 
 
 
 **Game Level buttons**
-The game level buttons are Bootstrap Icons/buttons which launch the relevant code within the Javascript Function, The level 1 game with single dice called when the game and script is first loaded. 
+
+ - The game level buttons are Bootstrap Icons/buttons which launch the
+   relevant code within the Javascript Function, The level 1 game with
+   single dice called when the game and script is first loaded.
+
 ![Game Levels](https://starranuk.github.io/dice-game/assets/readme_files/levels.png)
 
-Dependant on the level selected the random dice are displayed, either when selecting a level or when the previous answer is submitted.
+ - Dependant on the level selected the random dice are displayed, either
+   when selecting a level or when the previous answer is submitted.
+
 ![Random dice](https://starranuk.github.io/dice-game/assets/readme_files/dice_display.png)
 
-Thee player adds the dots/dice together and enters their answer for their total;
+ - Thee player adds the dots/dice together and enters their answer for
+   their total.
+
 ![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/ans_field_submit.png)
  
- A correct answer with no player name displays: ![A correct answer no name displays](https://starranuk.github.io/dice-game/assets/readme_files/correct.png)
+
+ - A correct answer with no player name displays:
+
+ ![A correct answer no name displays](https://starranuk.github.io/dice-game/assets/readme_files/correct.png)
  
- A correct answer with player name displays: ![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/correct_with_name.png)
+
+ - A correct answer with player name displays:
+
+![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/correct_with_name.png)
   
   
 
- A incorrect answer with no player name displays: ![A incorrect answer no name displays](https://starranuk.github.io/dice-game/assets/readme_files/incorrect.png)
+ 
+
+ - A incorrect answer with no player name displays:
+
+ ![A incorrect answer no name displays](https://starranuk.github.io/dice-game/assets/readme_files/incorrect.png)
  
  
- A incorrect answer with player name displays: 
+
+ - A incorrect answer with player name displays:
+
 ![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/incorrect_with_name.png)
 
 **Footer**
@@ -206,11 +244,18 @@ Initial tests showed that :
 
  - SEO an improvable 83.
 
- Corrections made from errors picked up during HTML and CSS validation improved performance and best practice.
+**Improvements**
  
- Accessibility was improved adding alt and aria-label's and by altering background contrasts, font colours.
 
-SEO was improved by improving the Metafile content.
+ - Corrections made from errors picked up during HTML and CSS validation
+   improved performance and best practice.
+
+ 
+
+ - Accessibility was improved adding alt and aria-label's and by
+   altering background contrasts, font colours.
+ - SEO was improved by adding more descriptions to the Metafile content.
+
 ![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/final-test.png) 
 
 
@@ -273,10 +318,12 @@ The following images are the pass results for all three pages:
 
 **Game Page**
 **HTML Validation**
+
 ![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/htmlChecker.png)
 
 **CSS Validation**
 Although a few parsing errors were picked up initially these were resolved and the CSS code has now passed W3C validation with permission to embed their logo's if required.
+
 ![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/W3CSSValidator.png)
 
 
@@ -325,6 +372,14 @@ Forking the GitHub Repository
 * The writing data to the DOM and the inclusion of SweetAlerts was suggested by my tutor Brian Macharia.
  - W3Schools - for code and snippets
  
+
+
+
+
+
+
+
+
 
 
 
