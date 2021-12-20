@@ -102,21 +102,18 @@ Although I imported Google Fonts I have mainly used Arial
  - Branding Logo
  - Game title "Add the Dots"
  - The Player and Computer score icons and scores.
- - Game Instructions via pop-up "sweetalert2" .
+ - **Game Instructions** via pop-up "sweetalert2" .
 
 ![Game Instructions](https://starranuk.github.io/dice-game/assets/readme_files/game-inst.png)
 
-
-
- - A reset button and pop-up "sweetalert2" which contains a warning "*You will lose your scores!, press the Cancel button if you have changed your mind and would like to go back to your game*".
-
+ - A **Reset Button** and pop-up "sweetalert2" which contains a warning "*You will lose your scores!, press the Cancel button if you have changed your mind and would like to go back to your game*".
 
 
 ![Reset Alert Message](https://starranuk.github.io/dice-game/assets/readme_files/resetalert.png)
  
  
 
- - An input field for the player to add their name. This is used to advise the player whether their answer is correct or incorrect. There are no game issues if the player does not enter their name.
+ - An "**Enter your name**" input field for the player to add their name. This is used to advise the player whether their answer is correct or incorrect. There are no game issues if the player does not enter their name.
 
 ![Enter your name](https://starranuk.github.io/dice-game/assets/readme_files/name.png)
 
@@ -124,29 +121,29 @@ Although I imported Google Fonts I have mainly used Arial
 
 **Game Level buttons**
 
- - The game level buttons are Bootstrap Icons/buttons which launch the
+ - The **Game Levels** buttons are Bootstrap Icons/buttons which launch the
    relevant code within the Javascript Function, The level 1 game with
    single dice called when the game and script is first loaded.
 
 ![Game Levels](https://starranuk.github.io/dice-game/assets/readme_files/levels.png)
 
- - Dependant on the level selected the random dice are displayed, either
+ - Dependant on the level selected the **Random Dice** are displayed, either
    when selecting a level or when the previous answer is submitted.
 
 ![Random dice](https://starranuk.github.io/dice-game/assets/readme_files/dice_display.png)
 
- - The player adds the dots/dice together and enters their answer for
+ - The player adds the dots/dice together and enters their **Answer** for
    their total.
 
 ![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/ans_field_submit.png)
  
 
- - A correct answer with no player name displays:
+ - A **correct answer** with **no player name** displays:
 
  ![A correct answer no name displays](https://starranuk.github.io/dice-game/assets/readme_files/correct.png)
  
 
- - A correct answer with player name displays:
+ - A **correct answer** with **player name** displays:
 
 ![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/correct_with_name.png)
   
@@ -154,13 +151,13 @@ Although I imported Google Fonts I have mainly used Arial
 
  
 
- - An incorrect answer with no player name displays:
+ - An **incorrect answer** with **no player name** displays:
 
  ![A incorrect answer no name displays](https://starranuk.github.io/dice-game/assets/readme_files/incorrect.png)
  
  
 
- - An incorrect answer with player name displays:
+ - An **incorrect answer** with **player name** displays:
 
 ![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/incorrect_with_name.png)
 
@@ -256,7 +253,7 @@ Initial tests showed that :
  - SEO was improved by adding more descriptions to the Metafile content.
 
 
-Final test result:
+**Final test result:**
 
 ![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/final-test.png) 
 
@@ -369,9 +366,16 @@ Forking the GitHub Repository
 **Acknowledgements**
  - Nicola Tarran for original idea and proof reading.
  - This project was inspired by the Code Institute Love Maths walk through by AJ Greaves and includes altered code and methods used from that tutorial.
-* The writing data to the DOM and the inclusion of SweetAlerts was suggested by my tutor Brian Macharia.
+ - The writing data to the DOM and the inclusion of SweetAlerts was suggested by my tutor Brian Macharia.
  - W3Schools - for code and snippets
  
+
+
+
+
+
+
+
 
 
 
