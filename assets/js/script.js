@@ -1,19 +1,19 @@
-/**This project was inspired by the Code Institute Love Maths walk through by AJGreaves.
+/**This project was inspired by the Code Institute Love Maths walk through by AJGreaves and includes altered code and methods used in that tutorial.
  * The writing data to the DOM and the inclusion of SweetAlerts was suggested by my tutor Brian Macharia. 
  * 
  * */
 
 /** When the page loads event listeners wait for button actions triggered by the player and dependant on the HTML Attributes data-type recieved runs
  * though the if statements and runs the code matching the data-type. */
- document.addEventListener("DOMContentLoaded", function() {
-	const buttons = document.getElementsByTagName("button");
+ document.addEventListener('DOMContentLoaded', function() {
+	const buttons = document.getElementsByTagName('button');
 
 	for (const button of buttons) {
-		button.addEventListener("click", function() {
-			if (this.getAttribute("data-type") === "reset") { /*SweetAlert re-set game warning message*/
+		button.addEventListener('click', function() {
+			if (this.getAttribute('data-type') === 'reset') { /*SweetAlert re-set game warning message*/
 				Swal.fire({
 					title: 'Are you sure?',
-					text: "You won't be able to undo this action and will lose your scores!",
+					text: 'You will lose your scores!, press the Cancel button if you have changed your mind and would like to go back to your game',
 					icon: 'warning',
 					showCancelButton: true,
 					confirmButtonColor: '#3085d6',
@@ -29,7 +29,7 @@
 						location.reload();
 					}
 				});
-			} else if (this.getAttribute("data-type") === "instructions") { /*SweetAlert game instructions*/
+			} else if (this.getAttribute('data-type') === 'instructions') { /*SweetAlert game instructions*/
 				Swal.fire({
 					title: '<strong><u>Game Instructions</u></strong>',
 					icon: 'info',
@@ -45,17 +45,17 @@
 					cancelButtonText: '<i class="fa fa-thumbs-down"></i>',
 					cancelButtonAriaLabel: 'Thumbs down'
 				});
-			} else if (this.getAttribute("data-type") === "submit") {
+			} else if (this.getAttribute('data-type') === 'submit') {
 				isAnswerCorrect();
 			} else {
-				const gameLevel = this.getAttribute("data-type");
+				const gameLevel = this.getAttribute('data-type');
 				runLevel(gameLevel);
 			}
 		});
 
 	}
-	document.getElementById("answer-field").addEventListener("keydown", function(event) {
-		if (event.key === "Enter") {
+	document.getElementById('answer-field').addEventListener('keydown', function(event) {
+		if (event.key === 'Enter') {
 			isAnswerCorrect();
 		}
 	});
@@ -72,8 +72,8 @@
  **/
 function runLevel(gameLevel) {
 
-	document.getElementById("answer-field").value = "";
-	document.getElementById("answer-field").focus();
+	document.getElementById('answer-field').value = "";
+	document.getElementById('answer-field').focus();
 
 	// Creates random numbers between 1 and 6
 	const num1 = Math.floor(Math.random() * 6) + 1;
@@ -95,130 +95,128 @@ function runLevel(gameLevel) {
      * Pushes the converted integer to a string to the DOM.
      * Sets the different scoring for each game level.
 	 * */
-	if (gameLevel === "level-1") {
+	if (gameLevel === 'level-1') {
 		const levelNum = gameLevel;
-		document.getElementById("level").innerHTML = levelNum;
+		document.getElementById('level').innerHTML = levelNum;
 		const image1 = `<img src="assets/images/dice${num1}.png" alt="${num1}">`;
-		document.getElementById("dice-1").innerHTML = image1;
+		document.getElementById('dice-1').innerHTML = image1;
 		const image2 = `<img src="assets/images/blank.png" alt="blank to clear cache">`;
-		document.getElementById("dice-2").innerHTML = image2;
+		document.getElementById('dice-2').innerHTML = image2;
 		const image3 = `<img src="assets/images/blank.png" alt="blank to clear cache">`;
-		document.getElementById("dice-3").innerHTML = image3;
+		document.getElementById('dice-3').innerHTML = image3;
 		const image4 = `<img src="assets/images/blank.png" alt="blank to clear cache">`;
-		document.getElementById("dice-4").innerHTML = image4;
+		document.getElementById('dice-4').innerHTML = image4;
 		const image5 = `<img src="assets/images/blank.png" alt="blank to clear cache">`;
-		document.getElementById("dice-5").innerHTML = image5;
-		const image6 = `<img src="assets/images/blank.png" alt="blank to clear cache">`;
-		document.getElementById("dice-6").innerHTML = image6;
+		document.getElementById('dice-5').innerHTML = image5;
+		const image6= `<img src="assets/images/blank.png" alt="blank to clear cache">`;
+		document.getElementById('dice-6').innerHTML = image6;
 		dice1.dataset.opval = `${strnum1}`;
-		roundScore.dataset.scoreValue = `${"1"}`;
+		roundScore.dataset.scoreValue = `${'1'}`;
 
-	} else if (gameLevel === "level-2") {
+	} else if (gameLevel === 'level-2') {
 		const levelNum = gameLevel;
-		document.getElementById("level").innerHTML = levelNum;
+		document.getElementById('level').innerHTML = levelNum;
 		const image1 = `<img src="assets/images/dice${num1}.png" alt="${num1}">`;
-		document.getElementById("dice-1").innerHTML = image1;
+		document.getElementById('dice-1').innerHTML = image1;
 		const image2 = `<img src="assets/images/dice${num2}.png" alt="${num2}">`;
-		document.getElementById("dice-2").innerHTML = image2;
+		document.getElementById('dice-2').innerHTML = image2;
 		const image3 = `<img src="assets/images/blank.png" alt="blank to clear cache">`;
-		document.getElementById("dice-3").innerHTML = image3;
+		document.getElementById('dice-3').innerHTML = image3;
 		const image4 = `<img src="assets/images/blank.png" alt="blank to clear cache">`;
-		document.getElementById("dice-4").innerHTML = image4;
+		document.getElementById('dice-4').innerHTML = image4;
 		const image5 = `<img src="assets/images/blank.png" alt="blank to clear cache">`;
-		document.getElementById("dice-5").innerHTML = image5;
+		document.getElementById('dice-5').innerHTML = image5;
 		const image6 = `<img src="assets/images/blank.png" alt="blank to clear cache">`;
-		document.getElementById("dice-6").innerHTML = image6;
+		document.getElementById('dice-6').innerHTML = image6;
 		dice1.dataset.opval = `${strnum1}`;
 		dice2.dataset.opval = `${strnum2}`;
-		roundScore.dataset.scoreValue = `${"2"}`;
+		roundScore.dataset.scoreValue = `${'2'}`;
 
 
-	} else if (gameLevel === "level-3") {
+	} else if (gameLevel === 'level-3') {
 		const levelNum = gameLevel;
-		document.getElementById("level").innerHTML = levelNum;
+		document.getElementById('level').innerHTML = levelNum;
 		const image1 = `<img src="assets/images/dice${num1}.png" alt="${num1}">`;
-		document.getElementById("dice-1").innerHTML = image1;
+		document.getElementById('dice-1').innerHTML = image1;
 		const image2 = `<img src="assets/images/dice${num2}.png" alt="${num2}">`;
-		document.getElementById("dice-2").innerHTML = image2;
+		document.getElementById('dice-2').innerHTML = image2;
 		const image3 = `<img src="assets/images/dice${num3}.png" alt="${num3}">`;
-		document.getElementById("dice-3").innerHTML = image3;
+		document.getElementById('dice-3').innerHTML = image3;
 		const image4 = `<img src="assets/images/blank.png" alt="blank to clear cache">`;
-		document.getElementById("dice-4").innerHTML = image4;
+		document.getElementById('dice-4').innerHTML = image4;
 		const image5 = `<img src="assets/images/blank.png" alt="blank to clear cache">`;
-		document.getElementById("dice-5").innerHTML = image5;
+		document.getElementById('dice-5').innerHTML = image5;
 		const image6 = `<img src="assets/images/blank.png" alt="blank to clear cache">`;
-		document.getElementById("dice-6").innerHTML = image6;
+		document.getElementById('dice-6').innerHTML = image6;
 		dice1.dataset.opval = `${strnum1}`;
 		dice2.dataset.opval = `${strnum2}`;
 		dice3.dataset.opval = `${strnum3}`;
-		roundScore.dataset.scoreValue = `${"3"}`;
+		roundScore.dataset.scoreValue = `${'3'}`;
 
 
-	} else if (gameLevel === "level-4") {
+	} else if (gameLevel === 'level-4') {
 		const levelNum = gameLevel;
-		document.getElementById("level").innerHTML = levelNum;
+		document.getElementById('level').innerHTML = levelNum;
 		const image1 = `<img src="assets/images/dice${num1}.png" alt="${num1}">`;
-		document.getElementById("dice-1").innerHTML = image1;
+		document.getElementById('dice-1').innerHTML = image1;
 		const image2 = `<img src="assets/images/dice${num2}.png" alt="${num2}">`;
-		document.getElementById("dice-2").innerHTML = image2;
+		document.getElementById('dice-2').innerHTML = image2;
 		const image3 = `<img src="assets/images/dice${num3}.png" alt="${num3}">`;
-		document.getElementById("dice-3").innerHTML = image3;
+		document.getElementById('dice-3').innerHTML = image3;
 		const image4 = `<img src="assets/images/dice${num4}.png" alt="${num4}">`;
-		document.getElementById("dice-4").innerHTML = image4;
+		document.getElementById('dice-4').innerHTML = image4;
 		const image5 = `<img src="assets/images/blank.png" alt="blank to clear cache">`;
-		document.getElementById("dice-5").innerHTML = image5;
+		document.getElementById('dice-5').innerHTML = image5;
 		const image6 = `<img src="assets/images/blank.png" alt="blank to clear cache">`;
-		document.getElementById("dice-6").innerHTML = image6;
+		document.getElementById('dice-6').innerHTML = image6;
 		dice1.dataset.opval = `${strnum1}`;
 		dice2.dataset.opval = `${strnum2}`;
 		dice3.dataset.opval = `${strnum3}`;
 		dice4.dataset.opval = `${strnum4}`;
-		roundScore.dataset.scoreValue = `${"4"}`;
+		roundScore.dataset.scoreValue = `${'4'}`;
 
-	} else if (gameLevel === "level-5") {
+	} else if (gameLevel === 'level-5') {
 		const levelNum = gameLevel;
-		document.getElementById("level").innerHTML = levelNum;
 		const image1 = `<img src="assets/images/dice${num1}.png" alt="${num1}">`;
-		document.getElementById("dice-1").innerHTML = image1;
+		document.getElementById('dice-1').innerHTML = image1;
 		const image2 = `<img src="assets/images/dice${num2}.png" alt="${num2}">`;
-		document.getElementById("dice-2").innerHTML = image2;
+		document.getElementById('dice-2').innerHTML = image2;
 		const image3 = `<img src="assets/images/dice${num3}.png" alt="${num3}">`;
-		document.getElementById("dice-3").innerHTML = image3;
+		document.getElementById('dice-3').innerHTML = image3;
 		const image4 = `<img src="assets/images/dice${num4}.png" alt="${num4}">`;
-		document.getElementById("dice-4").innerHTML = image4;
+		document.getElementById('dice-4').innerHTML = image4;
 		const image5 = `<img src="assets/images/dice${num5}.png" alt="${num5}">`;
-		document.getElementById("dice-5").innerHTML = image5;
+		document.getElementById('dice-5').innerHTML = image5;
 		const image6 = `<img src="assets/images/blank.png" alt="blank to clear cache">`;
-		document.getElementById("dice-6").innerHTML = image6;
+		document.getElementById('dice-6').innerHTML = image6;
 		dice1.dataset.opval = `${strnum1}`;
 		dice2.dataset.opval = `${strnum2}`;
 		dice3.dataset.opval = `${strnum3}`;
 		dice4.dataset.opval = `${strnum4}`;
 		dice5.dataset.opval = `${strnum5}`;
-		roundScore.dataset.scoreValue = `${"5"}`;
+		roundScore.dataset.scoreValue = `${'5'}`;
 
-	} else if (gameLevel === "level-6") {
+	} else if (gameLevel === 'level-6') {
 		const levelNum = gameLevel;
-		document.getElementById("level").innerHTML = levelNum;
 		const image1 = `<img src="assets/images/dice${num1}.png" alt="${num1}">`;
-		document.getElementById("dice-1").innerHTML = image1;
+		document.getElementById('dice-1').innerHTML = image1;
 		const image2 = `<img src="assets/images/dice${num2}.png" alt="${num2}">`;
-		document.getElementById("dice-2").innerHTML = image2;
+		document.getElementById('dice-2').innerHTML = image2;
 		const image3 = `<img src="assets/images/dice${num3}.png" alt="${num3}">`;
-		document.getElementById("dice-3").innerHTML = image3;
+		document.getElementById('dice-3').innerHTML = image3;
 		const image4 = `<img src="assets/images/dice${num4}.png" alt="${num4}">`;
-		document.getElementById("dice-4").innerHTML = image4;
+		document.getElementById('dice-4').innerHTML = image4;
 		const image5 = `<img src="assets/images/dice${num5}.png" alt="${num5}">`;
-		document.getElementById("dice-5").innerHTML = image5;
+		document.getElementById('dice-5').innerHTML = image5;
 		const image6 = `<img src="assets/images/dice${num6}.png" alt="${num6}">`;
-		document.getElementById("dice-6").innerHTML = image6;
+		document.getElementById('dice-6').innerHTML = image6;
 		dice1.dataset.opval = `${strnum1}`;
 		dice2.dataset.opval = `${strnum2}`;
 		dice3.dataset.opval = `${strnum3}`;
 		dice4.dataset.opval = `${strnum4}`;
 		dice5.dataset.opval = `${strnum5}`;
 		dice6.dataset.opval = `${strnum6}`;
-		roundScore.dataset.scoreValue = `${"6"}`;
+		roundScore.dataset.scoreValue = `${'6'}`;
 
 	} else {
 		alert(`Unknown game type: ${gameLevel}`);
@@ -234,8 +232,8 @@ function runLevel(gameLevel) {
  */
 function isAnswerCorrect() {
 	let roundpoints = roundScore.dataset.scoreValue;
-	let player = document.getElementById("name-box").value;
-	let userAnswer = parseInt(document.getElementById("answer-field").value);
+	let player = document.getElementById('name-box').value;
+	let userAnswer = parseInt(document.getElementById('answer-field').value);
 	let correctAnswer = addDice();
 	let answerIsCorrect = userAnswer === correctAnswer[0];
 
@@ -297,8 +295,8 @@ function updatePlayerScore() {
 	let roundpoints = roundScore.dataset.scoreValue;
 	let points = parseInt(roundpoints);
 
-	let rollingScore = parseInt(document.getElementById("player-points").innerText) + points;
-	document.getElementById("player-points").innerText = rollingScore;
+	let rollingScore = parseInt(document.getElementById('player-points').innerText) + points;
+	document.getElementById('player-points').innerText = rollingScore;
 
 }
 
@@ -309,8 +307,8 @@ function updateCompScore() {
 	let roundpoints = roundScore.dataset.scoreValue;
 	let points = parseInt(roundpoints);
 
-	let rollingScore = parseInt(document.getElementById("comp-points").innerText) + points;
-	document.getElementById("comp-points").innerText = rollingScore;
+	let rollingScore = parseInt(document.getElementById('comp-points').innerText) + points;
+	document.getElementById('comp-points').innerText = rollingScore;
 
 }
 
