@@ -72,7 +72,7 @@
  **/
 function runLevel(gameLevel) {
 
-	document.getElementById('answer-field').value = "";
+	document.getElementById('answer-field').value = '';
 	document.getElementById('answer-field').focus();
 
 	// Creates random numbers between 1 and 6
@@ -177,6 +177,7 @@ function runLevel(gameLevel) {
 
 	} else if (gameLevel === 'level-5') {
 		const levelNum = gameLevel;
+		document.getElementById('level').innerHTML = levelNum;
 		const image1 = `<img src="assets/images/dice${num1}.png" alt="${num1}">`;
 		document.getElementById('dice-1').innerHTML = image1;
 		const image2 = `<img src="assets/images/dice${num2}.png" alt="${num2}">`;
@@ -198,6 +199,7 @@ function runLevel(gameLevel) {
 
 	} else if (gameLevel === 'level-6') {
 		const levelNum = gameLevel;
+		document.getElementById('level').innerHTML = levelNum;
 		const image1 = `<img src="assets/images/dice${num1}.png" alt="${num1}">`;
 		document.getElementById('dice-1').innerHTML = image1;
 		const image2 = `<img src="assets/images/dice${num2}.png" alt="${num2}">`;
@@ -238,10 +240,10 @@ function isAnswerCorrect() {
 	let answerIsCorrect = userAnswer === correctAnswer[0];
 
 	if (answerIsCorrect) {
-		Swal.fire(`Well done ${player}, ${userAnswer} is the correct answer. Your points score is ${roundpoints}`); /*SweetAlert correct answer message*/
+		Swal.fire(`Well done ${player} ${userAnswer} is the correct answer. Your points score is ${roundpoints}`); /*SweetAlert correct answer message*/
 		updatePlayerScore();
 	} else {
-		Swal.fire(`Sorry ${userAnswer} is incorrect. The dice add up to ${correctAnswer[0]}, Your points score ${roundpoints} goes to the Computer .  Have another go ${player}, you can do it`); /*SweetAlert incorrect answer message*/
+		Swal.fire(`Sorry ${userAnswer} is incorrect. The dice add up to ${correctAnswer[0]} Your points score ${roundpoints} goes to the Computer .  Have another go ${player}, you can do it`); /*SweetAlert incorrect answer message*/
 		updateCompScore();
 	}
 
@@ -274,7 +276,7 @@ function addDice(gameLevel) {
 	} else if (calcLevel === 'level-2') {
 		return [operand1 + operand2, 'level-2'];
 	} else if (calcLevel === 'level-3') {
-		return [(operand1 + operand2) + operand3, 'level-3'];
+		return [(operand1 + operand2 + operand3), 'level-3'];
 	} else if (calcLevel === 'level-4') {
 		return [(operand1 + operand2 + operand3 + operand4), 'level-4'];
 	} else if (calcLevel === 'level-5') {
