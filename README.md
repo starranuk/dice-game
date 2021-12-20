@@ -4,11 +4,11 @@
 > Written with [StackEdit](https://starranuk.github.io/dice-game/index.html).
 > **About**
 
-# Add the Dots
+# Game - Add the Dots
 **The Idea**
-The idea for this site/game came from a game my wife came up with for our 3 year old grandson. The game involved taking turns in rolling 2 dice or more  with the aim being to roll a higher score than the other person. Very simple but the real aim of the game is that it gets a 3 year old counting the dots and adding the dice together in his head. 
+The idea for this site/game came from a game my wife came up with for our 3 year old grandson. The game involved taking turns in rolling 2 dice or more with our Grandson, adding up the dots on the dice with the aim rolling a higher score than the other person. Very simple but the real aim of the game is that it gets a 3 year old counting the dots and adding the dice together in his head. His motivation was that he wanted to beat our score but we got him to add up both scores.
 
-In this initial version you play against the computer, in that if your answer is incorrect the computer receives your points.
+In this initial version you play against the computer, if your answer is incorrect the computer receives your points.
 
 **The Game of Add the Dots**
 Initially the game does require the supervision of an adult as the pop-up screens do contain text and information on scores but children do pick up the idea of the game very quickly as the basic idea is simple.
@@ -21,8 +21,18 @@ The game is played on a single page which displays:
    answer .
  - The six game level buttons:
 
-![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/levels.png)
+![Game levels](https://starranuk.github.io/dice-game/assets/readme_files/levels.png)
 
+ - Game Levels
+   	 - Level 1 is a single dice absolute beginners level where a player only needs 		 to count the dots on the dice. A correct Level 1 answer
+   is worth one point.
+   	 - Level 2 generates two dice and is worth two points.
+   	 - Level 3 generates three dice and is worth three points.
+   	 - Level 4 generates four dice and is worth four points.
+   	 - Level 5 generates five dice and is worth five points.
+   	 - Level 6 generates six dice and is worth six points.
+
+	 
 **Random numbers for the dice are generated each time:**
 
  - The browser is refreshed.
@@ -30,12 +40,6 @@ The game is played on a single page which displays:
  - A game level button is pressed.
  - The Submit button is pressed.
 
-	 - Level 1 is a single dice absolute beginners level where a player only needs 	to count the dots on the dice. A correct Level 1 answer is worth one point.
-	 - Level 2 generates two dice and is worth two points.
-	 - Level 3 generates two dice and is worth three points.
-	 - Level 4 generates two dice and is worth four points.
-	 - Level 5 generates two dice and is worth five points.
-	 - Level 6 generates two dice and is worth six points.
 
 **The goals of "Add the Dots"**
 
@@ -48,22 +52,38 @@ The player is encouraged to try the harder levels because the number of points  
 Parents who want to encourage children to start understanding numbers through simple addition.
 
 ## Site Framework
- 
-### Wire Frame
+**Colour list:**
+Main Background rgb(228, 212, 212);
+Main Font colour: #02172b 
+Name and Answer box background colours: aqua with a red border.
 
+**Typography**
 
+Although I imported Google Fonts I have mainly used Arial
+
+**Images**
+
+ - Royalty free images from www.freeiconspng.com which were edited in to
+   alter their colours in MS paintbrush.
+   blank.png - this was used to clear the image cache in the browser when changing from a higher to a lower level.
+
+ - Bootstrap icons for dice buttons/levels and score icons.
+
+**Wire Frame**
+
+**Single Web page**
 ![Draft Web Page Design](https://starranuk.github.io/dice-game//assets/readme_files/main-wireframe.png)
 
-
+**Mobile Interpretation**
 ![Mobile Phone Draft Responsive Design ](https://starranuk.github.io/dice-game//assets/readme_files/mobile-wireframe.png)
 
-## Common Features
-The site is a single page with the Header containing the branding, player scores, game reset button, player name field and the Footer containing game instructions.
+## Features
+The site is a single page with the Header containing the branding, player scores, game instructions, game reset button, player name field and the Footer containing copyright and email address.
 
 **Responsive layout**
 
  - The sites responsive design retains the style and branding of the
-   site as screen size change.
+   site as screen sizes change.
   
 
 **Header**
@@ -79,7 +99,8 @@ The site is a single page with the Header containing the branding, player scores
 
 
 ![Reset Alert Message](https://starranuk.github.io/dice-game/assets/readme_files/resetalert.png)
- - An input field for the player to add their name. This is used when updating the player as to whether their answer was correct or incorrect.
+ 
+ An input field for the player to add their name. This is used when updating the player as to whether their answer was correct or incorrect. There are no game issues if the player does not enter their name.
 ![Enter your name](https://starranuk.github.io/dice-game/assets/readme_files/name.png)
 
 
@@ -87,16 +108,24 @@ The site is a single page with the Header containing the branding, player scores
 **Game Level buttons**
 The game level buttons are Bootstrap Icons/buttons which launch the relevant code within the Javascript Function, The level 1 game with single dice called when the game and script is first loaded. 
 ![Game Levels](https://starranuk.github.io/dice-game/assets/readme_files/levels.png)
-Dependant on the level selected the random dice are displayed
-![Random dice](https://starranuk.github.io/dice-game/assets/readme_files/display_dice.png)
+
+Dependant on the level selected the random dice are displayed, either when selecting a level or when the previous answer is submitted.
+![Random dice](https://starranuk.github.io/dice-game/assets/readme_files/dice_display.png)
+
 Thee player adds the dots/dice together and enters their answer for their total;
 ![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/ans_field_submit.png)
  
- A correct answer displays: 
- ![A correct answer displays](https://starranuk.github.io/dice-game/assets/readme_files/correct.png)
+ A correct answer with no player name displays: ![A correct answer no name displays](https://starranuk.github.io/dice-game/assets/readme_files/correct.png)
  
- A incorrect answer displays: 
- ![A incorrect answer displays](https://starranuk.github.io/dice-game/assets/readme_files/incorrect.png)
+ A correct answer with player name displays: ![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/correct_with_name.png)
+  
+  
+
+ A incorrect answer with no player name displays: ![A incorrect answer no name displays](https://starranuk.github.io/dice-game/assets/readme_files/incorrect.png)
+ 
+ 
+ A incorrect answer with player name displays: 
+![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/incorrect_with_name.png)
 
 **Footer**
 The footer contains:
@@ -106,7 +135,8 @@ The footer contains:
 
 ## Future Features
 
- - In this initial version you play against the computer,  if your answer is incorrect the computer receives your points, so a future version would allow for another player.
+ - In this initial version you play against the computer,  if your answer is incorrect the computer receives your points, so a future version could allow for another player.
+ - Currently if the answer is wrong the points are allocated to the computer, a future version could allow the player to have another attempt.
  - A more advanced version could also incorporate multiplication, subtraction and division.
 
 
@@ -133,12 +163,20 @@ The initial version of the program scored all of the levels the same and we noti
 
 To combat this I updated the system to award 1 point for level 1, 2 points for level 2 and so on up to 6 points for level six. This had the desired result of encouraging him to try the harder levels as his main aim was to gain as many points as possible.
 
+**Program Testing**
+
+ - One of the main issues to solve was when changing from a
+   higher to a lower game level the dice from the high level was still
+   displayed via the browser cache. The image would disapear if the page is reloaded/refreshed but the scores would be lost.
+   
+    To resolve this I added a very small blank image which was called, through script, in all the levels apart from 6 and would replace the cached image but not be visible to the player.
+
 **Responsiveness**
 
 The responsive ranges targeted were:
 
  - For Handheld Touchscreens with screen max-width: 1280px
- -  For Handheld Touchscreens with screen max-width: 1080px
+ - For Handheld Touchscreens with screen max-width: 1080px
  - Mobile phones with screen max-width: 653px
  - Mobile phones with screen max-width: 360px
 
@@ -192,12 +230,15 @@ SEO was improved by improving the Metafile content.
 
  **Site is understandable and viewable regardless of screen size.**
  
- -As well as desktop all pages are accessible and viewable
-   in the common Tablet and Mobile formats.
+ 
+
+ - As well as desktop all pages are accessible and viewable    in the
+   common Tablet and Mobile formats and tests ranged from a Motorola G5s, Samsung Galaxy S5, 10" Amazon Kindle Fire Tablet and a widescreen desktop PC.
 
  **Site provides a method of contact.**
 
-Although no direct contact is initially predicted a contact email address is provided in the footer.
+ - Although no direct contact is initially predicted a contact email
+   address is provided in the footer.
 
  **In Footer the user will find:**
 	
@@ -205,30 +246,35 @@ Although no direct contact is initially predicted a contact email address is pro
  -  Copyright
  
 
-### What a user may want
+## What a user may want
 
 
  **A Parent may want a child to gain a quick understanding of how to play the game without supervision**
    
- -The game is simple with the only increase in difficulty coming from the addition of another dice to add up as the player progresses through the levels.
+ 
+
+ - The game is simple with the only increase in difficulty coming from
+   the addition of extra dice to add up each time the player progresses
+   up to the next level.
+
  
  - The game shows the player whether their answer is correct or
    incorrect.  If incorrect the game shows the player the correct
-   answer.
+   answer and allocates the points to the computer.
 
- - The game keeps a tally of the scores so that the player can see how
-   well they are progressing.
+ - The game keeps a tally of the scores for both player and computer so that the player can see how well they are progressing.
 
 
 ## HTML and CSS Validation
 
 **HTML Testing**
-Initially some errors were picked up by the Validator, these ranged from Elements with no closing tags, elements such as iframe which required a title to double ups on alt attributes. However, as the Validator tells you what thee error is and on what line code is easily resolved.
+Initially some errors were picked up by both the HTML and CSS Validators. These were minor and ranged from Elements with no closing tags and missing semi colons. However, as the Validators tell you what the error is and on what line code these were easily resolved.
 The following images are the pass results for all three pages:
 
 **Game Page**
 **HTML Validation**
 ![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/htmlChecker.png)
+
 **CSS Validation**
 Although a few parsing errors were picked up initially these were resolved and the CSS code has now passed W3C validation with permission to embed their logo's if required.
 ![enter image description here](https://starranuk.github.io/dice-game/assets/readme_files/W3CSSValidator.png)
@@ -274,9 +320,9 @@ Forking the GitHub Repository
 
 **Acknowledgements**
  - Nicola Tarran for original idea and proof reading.
- - Brian Macharia- Mentor support, for the advice, tips and guidance, on my first project.
- - Alan at Tutor support
- - Code Institute Love Maths walk through by AJGreaves tutorial.
+ - This project was inspired by the Code Institute Love Maths walk through by 
+ - AJGreaves and includes altered code and methods used in that tutorial.
+* The writing data to the DOM and the inclusion of SweetAlerts was suggested by my tutor Brian Macharia.
  - W3Schools - for code and snippets
  
 
